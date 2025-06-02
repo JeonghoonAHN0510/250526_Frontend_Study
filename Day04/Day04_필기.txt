@@ -1,0 +1,58 @@
+- 복습
+    .css 확장자 파일에서 작성 후 html에서 link를 통해서 불러오기
+    font-family: "";
+    font-size: px
+    font-weight: bold
+    font-style: italic
+    color
+        1. color: black;
+        2. color: rgb(0,0,0)
+        3. color: #000000
+    word-spacing: px
+    letter-spacing: px
+    line-height: %
+    text-align: center left right
+    text-decoration: underline overline line-through
+    text-shadow: px px px color
+
+- 강사님 복습
+    속성명들 외워서 쓰지말고, 그때그때 찾아서 쓰면 된다.
+    선택자/식별자 매우 중요(자바 배울 때)
+        선택자{속성명:값;}
+            속성명 vs 속성값 -> 헷갈리면 안 됨
+    
+
+
+
+Day04
+- div 구역 설정을 잘 해야함.
+    일반 페이지 볼 때, div 몇 개 써야할 지 생각해보면 좋을 듯
+- 마크업은 생성되면서 하나의 구역을 차지하고, 기본 CSS 속성을 갖게 됨.
+    div는 기본 CSS 속성을 갖지 않고, display:block만 가짐
+    span은 기본 CSS 속성을 갖지 않고, display:inline만 가짐
+- 실습 파일들 강사님 버전이랑 비교해보자
+    디테일한 부분들 말고 태그를 쓰는 것이라던지, 코드를 간단히 쓰는 방법들.
+- Day02 3번 복습(a 태그)
+
+CSS 속성
+- border: 굵기 선종류 색상
+- border-radius:
+- box-shadow
+- width
+- height
+- padding
+- margin
+    margin: 0 auto; : 구역 자체 가로 가운데 정렬
+- background-color
+- display:
+    1. inline
+    2. block
+    3. inline-block
+    4. none
+    5. flex
+- box-sizing:
+    1. content-box
+    2. border-box
+
+
+메뉴 정하고, 1명 당 1페이지 이상 만들기

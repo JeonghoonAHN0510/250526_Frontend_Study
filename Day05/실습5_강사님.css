@@ -1,0 +1,44 @@
+body{
+    background-color: pink;
+    text-align: center; 
+    /* 
+    구역 내의 내용물(img input audio 포함) 가운데 정렬
+    div는 따로 margin: 0 auto; 해줘야 가운데 정렬
+    */
+}
+
+/* 제목 */
+.info > .title{
+    font-size: 20px;
+    font-weight: bold;
+    border: 3px solid white;
+    border-radius: 50px;
+    width: 300px;
+    padding: 10px;
+    margin: 0 auto;
+}
+/* 이미지 */
+.info > div > .profile{
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+    margin: 20px;
+}
+/* 소개 멘트 */
+.info > .content{
+    margin: 10px 0px;
+}
+/* 버튼 */
+.info > .linkbox > div{
+    background-color: skyblue;
+    margin: 15px auto;
+    padding: 15px;
+    border-radius: 10px;
+    width: 300px;
+}
+/* 일반적으로 a태그는 링크 기능 목적으로 CSS 기본값 제거 */
+a{
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+}

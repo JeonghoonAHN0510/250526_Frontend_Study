@@ -1,0 +1,33 @@
+@font-face {
+    font-family: 'BMJUA';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/BMJUA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+.title{
+    font-family: "궁서";
+    font-size: 50px;
+    font-style: italic;
+}
+.content1{
+    font-family: "BMJUA";
+    color: blue;
+    font-weight: bold;
+    word-spacing: 10px;
+    letter-spacing: 12px;
+    line-height: 130%;
+}
+.content2{
+    color: red;
+    text-align: center;
+    text-decoration: underline overline line-through;
+    text-shadow: 1px 1px 1px gray;
+}
+.content3{
+    color: red;
+    font-weight: bold;
+    font-size: 25px;
+    text-align: center;
+    text-decoration: underline overline line-through;
+    text-shadow: 1px 1px 1px gray;
+}

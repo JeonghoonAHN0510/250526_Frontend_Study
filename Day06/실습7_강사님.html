@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset='utf-8'>
+        <title>Page Title</title>
+        <link rel='stylesheet' href='실습7_강사님.css'>
+    </head>
+
+    <body>
+        <div id="wrap"> <!-- 모든 마크업들을 감싼 전체 div -->
+            <div id="header"> <!-- 1. 헤더-->
+                <div class="header-logo"> <!-- 1-1. 헤더 좌측 로고 -->
+                    <img src="./실습7 img/logo.png"/>
+                </div>
+                <div class="header-menu"> <!-- 1-2. 헤더 우측 메뉴-->
+                    <ul class="top-menu"> <!-- 1-2-1. 헤더 상단 메뉴 -->
+                        <li> 김지영(jykim) |<!--(오른쪽 shift+원화기호)--> </li>
+                        <li><a href="#">로그아웃 |</a></li>
+                        <li><a href="#">정보수정</a></li>
+                    </ul>
+                    <ul class="main-menu"> <!-- 1-2-2. 헤더 메인 메뉴-->
+                        <li><a href="#">HOME</a></li>
+                        <li><a href="#">출석부</a></li>
+                        <li><a href="#">작품갤러리</a></li>
+                        <li><a href="#">게시판</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div id="main-img"> <!-- 2. 대표이미지 -->
+                <img src="실습7 img/main_bg.png"/>
+            </div>
+            <div id="main"> <!-- 3. 본문 -->
+                <div class="sidebar"> <!-- 3-1. 본문 사이드바 -->
+                    <h3 class="title">The 베이킹</h3>
+                    <p class="comment">안녕하세요. 쿠키와 빵 만들기 정보를 공유하고 소통하는 공간입니다.</p>
+                    <div class="searchbox">
+                        <input class="search-input" type="text"/>
+                        <input class="search-btn" type="button" value="검색"/>
+                    </div>
+                    <h4 class="sub-title">베이킹 요리</h4>
+                    <ul class="sub-menu">
+                        <li>쿠키 만들기</li>
+                        <li>빵 만들기</li>
+                        <li>마카롱 만들기</li>
+                    </ul>
+                    <h4 class="sub-title">최근 댓글</h4>
+                    <ul class="sub-menu">
+                        <li>쿠키 재미있어요.</li>
+                        <li>빵 좋아요</li>
+                        <li>마카롱 만들기 추천</li>
+                    </ul>
+                </div>
+                <div class="content"> <!-- 3-2. 본문 게시판 -->
+                    <div class="leftbox"> <!-- 알림 + 게시판 -->
+                        <h3 class="sub-title">알림</h3>
+                        <ul class="board">
+                            <li>
+                                <div>쿠키 클래스 연기 합니다.</div><div>09.30</div>
+                            </li>
+                            <li>
+                                <div>쿠키 클래스 연기 합니다.</div><div>09.30</div>
+                            </li>
+                            <li>
+                                <div>쿠키 클래스 연기 합니다.</div><div>09.30</div>
+                            </li>
+                            <li>
+                                <div>쿠키 클래스 연기 합니다.</div><div>09.30</div>
+                            </li>
+                            <li>
+                                <div>쿠키 클래스 연기 합니다.</div><div>09.30</div>
+                            </li>                                                                
+                        </ul>
+                        <h3 class="sub-title">게시판</h3>
+                        <ul class="board">
+                            <li>
+                                <div>쿠키 클래스 연기 합니다.</div><div>09.30</div>
+                            </li>
+                            <li>
+                                <div>쿠키 클래스 연기 합니다.</div><div>09.30</div>
+                            </li>
+                            <li>
+                                <div>쿠키 클래스 연기 합니다.</div><div>09.30</div>
+                            </li>
+                            <li>
+                                <div>쿠키 클래스 연기 합니다.</div><div>09.30</div>
+                            </li>
+                            <li>
+                                <div>쿠키 클래스 연기 합니다.</div><div>09.30</div>
+                            </li>                                                                
+                        </ul>                            
+                    </div>
+                    <div class="rightbox"> <!-- 제빵 클래스 -->
+                        <h3 class="sub-title">제빵 클래스</h3>
+                        <div class="product-list">
+                            <ul class="product"> <!-- 제품 1개당 ul 1개 -->
+                                <li><img src="실습7 img/bread1.png"></li>
+                                <li>도너츠 만들기 [1]</li>
+                                <li>24.11.18</li>
+                            </ul>
+                            <ul class="product">
+                                <li><img src="실습7 img/bread2.png"></li>
+                                <li>도너츠 만들기 [2]</li>
+                                <li>24.11.18</li>
+                            </ul>
+                            <ul class="product">
+                                <li><img src="실습7 img/bread3.png"></li>
+                                <li>도너츠 만들기 [3]</li>
+                                <li>24.11.18</li>
+                            </ul>
+                            <ul class="product">
+                                <li><img src="실습7 img/bread4.png"></li>
+                                <li>도너츠 만들기 [4]</li>
+                                <li>24.11.18</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="footer"> <!-- 4. 푸터 -->
+                <div class="footer-inner"> <!-- 푸터 내부 -->
+                    <ul class="footer-topmenu"> <!-- 푸터 상단 -->
+                        <li><a href="#">The베이킹 소개</a></li>
+                        <li><a href="#">개인정보처리방침</a></li>
+                        <li><a href="#">저작권 소개</a></li>
+                        <li><a href="#">이용안내</a></li>
+                    </ul>
+                    <div class="footer-bottom"> <!-- 푸터 하단 -->
+                        <ul>
+                            <li><h3 class="footer-title">문의전화</h3></li>
+                            <li>123-1234</li>
+                            <li>10:00 ~ 18:00 (lunch 12:00 ~ 13:00)</li>
+                        </ul>
+                        <ul>
+                            <li><h3 class="footer-title">The베이킹</h3></li>
+                            <li>주소 : 인천광역시 부평구 부평역 123-1234</li>
+                            <li>전화 : 031-123-1234</li>
+                            <li>팩스 : 031-123-1234</li>
+                            <li>이메일 : qweqwe@qweqwe.com</li>
+                        </ul>
+                        <ul>
+                            <li><h3 class="footer-title">입금정보</h3></li>
+                            <li>농협 123-123-123456</li>
+                            <li>The베이킹</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+
+</html>

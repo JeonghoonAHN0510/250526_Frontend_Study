@@ -1,0 +1,96 @@
+/* ============ 공통 CSS ============ */
+*{
+    margin: 0; padding: 0; /* 기본 여백 제거 */
+    box-sizing: border-box; /* 구역 사이즈에 테두리 포함 */
+}
+a{ /* a태그 기본값 제거 */
+    text-decoration: none; /* 밑줄 제거 */
+    color: black;        /* 폰트 색상 변경 */
+}
+li{ /* ul 또는 ol의 글머리 제거 */
+    list-style: none;
+}
+
+/* ============ 헤더 CSS ============ */
+#header{
+    display: flex; /* 하위 요소들을 배치 방법 */
+    justify-content: space-between; /* 양쪽 끝 가로 균등 배치 */
+    align-items: center; /* 세로 정렬 */
+    width: 1280px;
+    margin: 10px auto;
+}
+.top-menu{
+    display: flex;
+    justify-content: flex-end;
+    margin: 20px;
+    font-size: 12px;
+}
+.top-menu > li{
+    margin-left: 20px;
+}
+.main-menu{
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    justify-content: flex-end;
+    margin: 30px;
+}
+.main-menu > li{
+    margin-left: 60px;
+}
+
+/* ============ 대표 이미지 CSS ============ */
+#main-img > img{
+    width: 100%;
+}
+
+/* ============ 본문 CSS ============ */
+#main{
+    display: flex;
+    justify-content: space-between; /* 가로 균등 정렬 */
+    width: 1280px; /* 가로 사이즈 */
+    margin: 20px auto; /* 가로 가운데 정렬 */
+}
+.sidebar{width: 250px;}
+.content{width: 1000px;}
+
+/* ============ 본문 사이드 CSS ============ */
+.sidebar > h3{
+    background-color: #808080;
+    color: white;
+    padding: 10px; /* 안쪽 여백 */
+}
+.sidebar > ul > li{
+    border-bottom: 1px solid #eeeeee;
+    padding: 10px;
+}
+/* ============ 본문 내용 CSS ============ */
+.content > h3{
+    font-size: 20px;
+    border-bottom: 1px solid #eeeeee;
+    padding-bottom: 18px;
+    margin-bottom: 15px;
+}
+.content > img{
+    display:block;
+    margin: 0 auto;
+}
+/*  img 가운데 정렬하기.
+    1. div 씌우고
+        .imgbox{text-align: center;} 
+    2. div 씌우지않고, 
+        .content > img{display:block; margin: 0 auto;}
+*/
+
+/* ============ 푸터 CSS ============ */
+#footer{
+    background-color: #2c2a29;
+    color: white;
+}
+.footer-inner{
+    display: flex;
+    justify-content: space-between; /* 양쪽 끝 가로 정렬 */
+    width: 1280px;
+    margin: 0 auto; 
+    padding: 30px 0px;
+}

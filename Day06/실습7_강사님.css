@@ -1,0 +1,149 @@
+/*======================= 공통 CSS =======================*/
+*{
+    margin: 0; padding: 0; /* 기본 여백 제거 */
+    box-sizing: border-box; /* 구역 사이즈를 테두리까지 포함 */
+}
+li{list-style: none;} /* li의 글머리 제거 */
+a{
+    text-decoration: none; /* 밑줄 제거 */
+    color: black; /* 폰트 색상 변경 */
+}
+
+
+/*======================= 헤더 CSS =======================*/
+#header{
+    /* 하위 요소 배치 방법 */
+    display: flex;
+    justify-content: space-between; /* 균등 가로 정렬 */
+    align-items: center; /* 세로 가운데 정렬 */
+    /* 해당 요소 가운데 정렬 */
+    width: 1280px;
+    margin: 15px auto; /* 구역 가로 가운데 자동 정렬*/
+}
+.top-menu{
+    display: flex;
+    justify-content: flex-end;
+}
+.main-menu{
+    display: flex;
+    justify-content: flex-end;
+}
+.main-menu > li{
+    font-size: 20px;
+    font-weight: bold;
+    margin: 20px 0px 30px 100px;
+}
+
+/*======================= 대표이미지 CSS =======================*/
+#main-img > img{width: 100%;}
+
+/*======================= 본문 CSS =======================*/
+#main{
+    display: flex;
+    justify-content: space-between;
+    width: 1280px;
+    margin: 25px auto;
+}
+.sidebar{
+    width: 250px;
+}
+.content{
+    width: 1000px;
+    display: flex;
+    justify-content: space-between;
+}
+.content > .leftbox{
+    width: 490px;
+}
+.content > .rightbox{
+    width: 490px;
+}
+
+/*======================= 사이드바 CSS =======================*/
+.sidebar > .title{
+    background-color: #0ca9a2;
+    color: white;
+    font-size: 20px;
+    padding: 10px;
+}
+.sidebar > .comment{
+    line-height: 160%; /* 줄간격 */
+    padding: 5px;
+}
+.sidebar > .searchbox{
+    margin: 2px 0px;
+}
+.sidebar > .searchbox > .search-input{
+    width: 180px;
+    height: 30px;
+    border-radius: 10px; /* 둥근 모서리 */
+    padding: 1px 5px;
+}
+.sidebar > .searchbox > .search-btn{
+    padding: 3px 7px; /* 안쪽 여백으로 버튼 크기 수정할 수 있음 */
+}
+.sidebar > .sub-title{
+    border-top: 2px solid black;
+    border-bottom: 1px solid #eeeeee;
+    margin-top: 25px;
+    font-size: 18px;
+    padding: 5px;
+}
+.sidebar > .sub-menu > li{
+    padding: 3px 5px;
+}
+
+/*======================= 본문 좌측 게시판 CSS =======================*/
+.content .sub-title{
+    border-bottom: 2px solid black;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+.content > .leftbox > .board > li{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 10px;
+}
+.content > .leftbox > .board{
+    margin-bottom: 30px;
+}
+/*======================= 본문 우측 게시판 CSS =======================*/
+.content > .rightbox > .product-list{
+    display: flex;
+    flex-wrap: wrap; /* 하위 요소들이 부모 요소보다 커지면 자동 줄바꿈 */
+}
+.content > .rightbox > .product-list > .product{
+    width: 240px;
+    margin-bottom: 30px;
+}
+/*======================= 푸터 CSS =======================*/
+#footer{
+    background-color: #05344e;
+    color: white;
+    padding: 20px 0px;
+}
+.footer-inner{
+    width: 1280px;
+    margin: 0 auto;
+}
+.footer-inner > .footer-topmenu{
+    display: flex;
+    margin-bottom: 25px;
+}
+.footer-inner > .footer-topmenu > li{
+    margin-right: 40px;
+}
+.footer-inner > .footer-bottom{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.footer-inner > .footer-bottom .footer-title{
+    margin-bottom: 10px;
+}
+.footer-inner > .footer-bottom li{ /* 점심 먹고 여기 수정 */
+    margin: 5px 0px;
+} 
+.footer-topmenu > li > a{
+    color: white;
+}

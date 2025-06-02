@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset='utf-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <title>Page Title</title>
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+        <script src='main.js'></script>
+    </head>
+
+    <body>
+
+        <ul> <!-- unorder list : 순서(번호)없는 리스트 -->
+            <li> 1일차 </li>    <!-- list item : 리스트의 항목 -->
+            <li> 2일차 </li>    <!-- (li -> ul -> body -> html) -->
+            <li> 3일차 </li>    <!-- 리스트의 활용 : 메뉴 나열(네이버 메뉴 확인해보기) -->
+        </ul>                   <!-- (ul -> body -> html) -->
+
+        <ol> <!-- order list : 순서(번호)있는 리스트 -->
+            <li> 1일차 </li>   
+            <li> 2일차 </li>    
+            <li> 3일차 </li>
+        </ol>
+
+        <a href="http://www.naver.com"> 네이버로 이동 </a> <br />
+        <!-- 속성 : 각 마크업들의 추가적인 특징(단, 각 마크업마다 다른 속성을 갖는다.) -->
+        <a href="2_제목및문단.html"> 이전 실습 파일로 이동 </a> <br />
+        <a href="http://www.naver.com" target="_blank"> 네이버로 새로운 탭으로 열기 </a> <br />
+        <!-- target="_blank" 새로운 탭으로 여는 마크업 -->
+        <a href="tel:010-5109-1342"> 전화걸기(모바일에서만 가능) </a> <br />
+        
+        <!-- 
+            상대 경로 vs 절대 경로 
+                상대 경로 : 현재 파일 기준으로부터의 경로
+                    - 현재 위치에서 호출할 파일의 경로를 표현 방식
+                    ./ : 현재 경로(생략 가능) "./1_html시작.html" = "1_html시작.html"
+                    ../ : 상위 폴더로 이동
+                        프로젝트 폴더 상태
+                        2025_STUDY
+                            Day02
+                                1_
+                                2_
+                                3_
+                            Day03
+                                Day02_test
+                절대 경로 : 고정된 기준으로부터의 경로
+                    - 파일 위치의 전체 경로 표현 방식
+            -->
+        
+        <a href="./1_html시작.html"> 상대 경로 </a> <br />
+        <a href="http://192.168.40.186:5500/Day02/1_html시작.html"> (서버 기준) 절대 경로 </a> <br />
+        <a href="C:\Users\tj-bu-702-04\Desktop\2025_Study\Day02\1_html시작.html"> (로컬 기준) 절대 경로</a> <br />
+
+        <a href="../Day03/day02_test.html"> 상위 폴더로 이동 경로 </a>
+
+
+
+
+    </body>
+
+</html>

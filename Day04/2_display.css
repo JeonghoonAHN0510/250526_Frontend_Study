@@ -1,0 +1,47 @@
+*{
+    border: 1px solid red;
+}
+/* display: inline; - [ span의 기본값 ]*/
+.s1{
+    display: inline; /* 한 줄에 해당 구역을 포함시킴 : <span> <a> */
+    /* inline으로는 width, height를 적용할 수 없다. */
+    width: 100px; height: 100px;
+    /* inline으로는 좌/우 여백만 수정 가능하다.(상/하 여백 불가능) */
+    margin: 20px;
+    padding: 20px;
+}
+.s2{
+    display: block; /* 한 줄을 차지하게 됨 : <div> <h> <p> <ul> <ol> */
+    width: 100px; height: 100px;
+    margin: 20px;
+    padding: 20px;
+}
+.s3{
+    display: inline-block; /* 한 줄에 해당 구역을 포함시키면서 크기 조정 <input /> <button> <img />  */
+    width: 100px; height: 100px;
+    margin: 20px;
+    padding: 20px;
+}
+.s4{
+    display: none; /* 표시 안함 */
+}
+.flexbox1{
+    display: flex; /* 하위 요소들의 배치 방법 제시 */
+}
+/* 
+1. flex, 2. float 3. grid 
+    mui.com
+    getbootstrap.kr
+*/
+.box{
+    box-sizing: content-box; /* 구역크기가 컨텐츠 기준 */
+    width: 500px;
+    padding: 10px;
+    /* padding 추가 후 구역 전체 크기 : 520px */
+}
+.box2{
+    box-sizing: border-box; /* 구역크기가 컨텐츠+padding 기준(많이 쓰임) */
+    width: 500px;
+    padding: 10px;
+    /* padding 추가 후 구역 전체 크기 : 500px */
+}

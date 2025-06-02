@@ -1,0 +1,25 @@
+.img{
+    width: 400px;
+    height: 500px;
+}
+.title{
+    margin: 20px 0px 15px 2px;
+}
+.content1{
+    color: orange;
+    font-size: 30px;
+    font-weight: bold;
+}
+.content2{
+    font-weight: bold;
+    font-size: 15px;
+}
+.content3{
+    background-color: #0f6878;
+    color: white;
+    padding: 20px;
+    margin: 20px 0px;
+}
+.content4{
+    color: orange;
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset='utf-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <title>Page Title</title>
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+        <script src='main.js'></script>
+    </head>
+
+    <body>
+
+        <img src="./구글로고.jpg"/>
+        <img src="../Day03/구글로고.jpg"/>
+        <img src="../구글로고.jpg"/>
+        <img src="http://192.168.40.186:5500/Day02/구글로고.jpg"/> <!-- 서버 절대 경로-->
+        <img src="C:\Users\tj-bu-702-04\Desktop\2025_Study\Day02\구글로고.jpg"/> <!-- 로컬 절대경로 -->
+        <!-- 
+        서버로 접근하면 로컬 절대경로의 이미지를 불러오지 못함 
+        서버는 로컬 파일에 접근할 수 있는 권한이 없음. 
+        -->
+
+        <!-- 
+        픽사베이(https://pixabay.com/ko/) : 무료 사진/영상/음원
+        눈누(https://noonnu.cc/font_page/pick) : 무료 폰트
+        -->
+        <audio src="오디오.mp3" controls="controls" autoplay="autoplay"> </audio> 
+        <!-- 브라우저 정책상 자동실행 안 됨 -->
+        <video src="비디오.mp4" controls="controls" autoplay="autoplay" muted="muted"> </video>
+        <!-- autoplay + muted인 상태에서는 자동실행 가능 -->
+        
+        <!-- 멀티미디어 : 유튜브 -> 공유 -> 퍼가기 -->
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/pS57UX6s-xw?si=yjaMhZ0-flyodl3q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+        <!-- 지도 : 공유 -> 퍼가기 -->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3764.7063431112592!2d126.72481226552934!3d37.4907429749741!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357b7c444b6c1ca5%3A0xaaf45d1622da77c0!2z67aA7Y-J!5e0!3m2!1sko!2skr!4v1748319607372!5m2!1sko!2skr" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        
+
+    </body>
+
+</html>

@@ -1,0 +1,20 @@
+- 자습
+    https://velog.io/@sukong/series : 심심할 때 읽어보기
+display: flex;
+    align-items : 수직/세로 정렬
+        flex-start : 요소들을 위로 정렬
+        flex-end : 요소들을 아래로 정렬
+        center : 요소들을 세로선의 가운데로 정렬
+        baseline : 요소들을 시작 위치에 정렬
+        stretch : 요소들을 컨테이너에 맞도록 늘림.
+
+    justify-content : 수평/가로 정렬
+        flex-start : 요소들을 왼쪽으로 정렬
+        flex-end : 요소들을 오른쪽으로 정렬
+        center : 요소들을 가로선의 가운데로 정렬
+        space-between : 요소들 사이에 동일한 간격
+        space-around : 요소들 주위에 동일한 간격
+
+구역을 잘 잡자! img만 넣어도 되지만 div로 나눠보자~
+alt+183 : ·
+이런 코드를 왜 썼는지 내 생각이 들어가게 설명할 수 있어야한다.

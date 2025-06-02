@@ -1,0 +1,17 @@
+.big_box{
+    width: 360px;
+    border: 1px solid #eeeeee;
+}
+.img{
+    border-bottom: 1px solid #eeeeee;
+    width: 360px;
+    height: 270px;
+}
+.content{
+    padding: 0px 3px 10px 10px;
+}
+.point{
+    font-weight: bold;
+    color: orange;
+}
+
