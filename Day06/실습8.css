@@ -1,0 +1,105 @@
+/*======================= 공통 CSS =======================*/
+*{
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+}
+li{list-style: none;}
+a{
+    text-decoration: none;
+    color: black;
+}
+
+/*======================= 1. 헤더 CSS =======================*/
+.header{
+    width: 1280px;
+    margin: 20px auto 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 30px;
+}
+.header-left{
+    display: flex;
+    font-size: 25px;
+}
+.header-left-blue{
+    color: blue;
+    padding-right: 15px;
+}
+.header-mainmenu{
+    display: flex;
+}
+.header-mainmenu > li{
+    padding-left: 15px;
+    font-size: 18px;
+}
+
+/*======================= 2. 메인 이미지 CSS =======================*/
+.main-img > img{
+    display: block; margin: 0 auto;
+}
+
+/*======================= 3. 내용 CSS =======================*/
+.content{
+    width: 1280px;
+    margin: 30px auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 50px;
+}
+.content-main{
+    display: flex;
+    width: 560px;
+}
+.content-main > img{
+    margin-right: 20px;
+}
+
+/*======================= 4. 하단 이미지 CSS =======================*/
+.bottom-img{
+    background-color: #eeeeee;
+    margin-bottom: 20px;
+}
+.bottom-inner{
+    width: 1280px;
+    margin: 0 auto;
+}
+.img-list{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 50px 20px;
+}
+.imgs{
+    width: 270px;
+}
+
+/*======================= 5. 푸터 CSS =======================*/
+.footer{
+    background-color: #292c32;
+    color: white;
+    padding: 70px;
+}
+.footer-inner{
+    width: 1280px;
+    margin: 0px auto;
+    padding: 0px 25px;
+    display: flex;
+    justify-content: space-between;
+}
+.footer-center{
+    width: 600px;
+}
+.footer-top-info{
+    display: flex;
+    margin-bottom: 20px;
+}
+.footer-top-info > li{
+    padding-right: 5px;
+}
+.footer-icon{
+    display: flex;
+    padding-right: 50px;
+}
+.footer-icon > li{
+    padding-left: 25px;
+}
