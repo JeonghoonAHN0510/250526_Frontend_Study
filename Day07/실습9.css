@@ -1,0 +1,222 @@
+/*==========================공통 CSS 작성==========================*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+li{
+    list-style: none;
+}
+
+/*==========================헤더 CSS 작성==========================*/
+.header{
+    width: 100%;
+    position: relative;
+}
+.header-topmenu{
+    display: flex;
+    justify-content: flex-end;
+    border-bottom: 1px solid #eeeeee;
+    padding: 10px;
+    margin-right: 30px;
+    margin-bottom: 20px;
+}
+.header-topmenu > li > span{
+    padding: 0px 15px;
+}
+.header-topmenu > li > img{
+    width: 20px;
+    height: 20px;
+    margin: 2px 20px 0px 0px;
+}
+.header-bot{
+    display: flex;
+    justify-content: flex-start;
+    height: 60px;
+    align-items: center;
+    padding: 45px 0px;
+    background-color: rgba(255,255,255,0.8);
+    position: sticky;
+    top: 0px;
+}
+.header-bot > img{
+    width: 155px;
+    height: 25px;
+    margin: 50px 40px;
+    
+}
+.mainmenu{
+    display: flex;
+    padding-right: 150px;
+}
+.mainmenu > li{
+    padding: 0px 20px;
+}
+.mainmenu > li > a{
+    padding: 0px 5px;
+}
+.submenu{
+    background-color: white;
+    position: absolute;
+    top: 80px;  
+    text-align: center;
+    padding: 10px 20px;
+    display: none;
+}
+.mainmenu > li:hover .submenu{
+    display: block;
+}
+.search-icon > img{
+    width: 25px;
+    height: 25px;
+}
+.new{
+    color: red;
+}
+.search-icon{
+    border-bottom: 1px solid black;
+    width: 200px;
+    height: 30px;
+    display: flex;
+    justify-content: flex-end;
+}
+/*==========================메인 이미지 CSS 작성==========================*/
+.main-img{
+    margin: 30px 0px;
+}
+/*==========================본문 CSS 작성==========================*/
+.comment{
+    width: 1600px;
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom: 50px;
+}
+.comment1{
+    padding-bottom: 20px;
+}
+.comment2{
+    color: gray;
+}
+
+.container{
+    margin-bottom: 50px;
+}
+
+.container-inner{
+    width: 1600px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.product{
+    width: 370px;
+    margin-bottom: 35px;
+}
+.product-img{
+    width: 370px;
+    margin-bottom: 10px;
+}
+.list2{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.color{
+    display: flex;
+}
+.black{
+    background-color: black;
+    width: 15px;
+    height: 15px;
+    border: 1px solid gray;
+    margin-right: 5px;
+}
+.white{
+    background-color: white;
+    width: 15px;
+    height: 15px;
+    border: 1px solid gray;
+}
+.review{
+    color: gray;
+}
+.bold{
+    font-weight: bold;
+}
+.size{
+    font-size: 13px;
+    color: gray;
+}
+.container-price{
+    display: flex;
+    justify-content: space-between;
+}
+.price1{
+    text-decoration: line-through;
+    color: gray;
+}
+.percent{
+    font-weight: bold;
+    color: red;
+}
+.container-img > img{
+    margin-right: 5px;
+}
+
+/*==========================푸터 CSS 작성==========================*/
+.footer-top{
+    background-color: #f7f7f7;
+}
+.footer-topinner{
+    display: flex;
+    justify-content: space-between;
+    width: 1600px;
+    margin: 0 auto;
+    padding: 50px 100px;
+}
+.footer-bold{
+    font-weight: bold;
+    font-size: 20px;
+    padding-bottom: 12px;
+}
+.footer-bot{
+    padding: 35px;
+    color: gray;
+    text-align: center;
+}
+/*==========================팝업 CSS 작성==========================*/
+.popup{
+    position: fixed;
+    top: 30%;
+    right: 0px;
+}
+.popup img{
+    width: 30px;
+}
+.popup > ul > li{
+    border: 1px solid #eeeeee;
+    background-color: #f7f7f7;
+    padding: 15px;
+    position: relative;
+}
+.popupSub{
+    display: none;
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    width: 80px;
+    height: 20px;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+    padding-bottom: 5px;
+}
+.popup > ul > li:hover .popupSub{
+    display: inline;
+}
