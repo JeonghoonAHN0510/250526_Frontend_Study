@@ -1,0 +1,41 @@
+.redbox{
+    width: 700px;
+    height: 450px;
+    background-color: red;
+    margin: 50px auto;
+    position: relative; /* 하위 요소의 absolute 기준 설정 */
+}
+.box{
+    background-color: yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    width: 100px;
+    height: 70px;
+    position: absolute; /*  relative속성을 가진 가장 가까운 상위 요소를 기준 */ 
+}
+.box1{
+    top: 50px;
+    left: 300px;
+}
+.box2{
+    top: 120px;
+    left: 150px;
+}
+.box3{
+    top: 120px;
+    left: 450px;
+}
+.box4{
+    top: 260px;
+    left: 150px;
+}
+.box5{
+    top: 260px;
+    left: 450px;
+}
+.box6{
+    top: 330px;
+    left: 300px;
+}
