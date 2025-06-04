@@ -1,0 +1,224 @@
+/*============================공통 CSS 작성============================*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 12px;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+/*============================레이아웃 CSS 작성============================*/
+#header{
+    width: 100%;
+    display: contents;
+}
+#content{
+    width: 1600px;
+    margin: 0 auto;
+}
+#footer{
+    width: 100%;
+}
+
+/*============================1. 헤더 CSS 작성============================*/
+/*============================상단 메뉴============================*/
+#topMenu{
+    display: flex;
+    justify-content: flex-end;
+    border-bottom: 1px solid #dbdbdb;
+    padding: 10px;
+}
+#topMenu > li > span{
+    padding: 0px 15px;
+}
+#topMenu > li img{
+    width: 20px;
+    margin: 2px 20px 0px 0px;
+}
+/*============================본 메뉴============================*/
+#mainMenu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 40px;
+}
+#mainMenu > ul{
+    display: flex;
+    width: 80%;
+}
+#mainMenu > ul > li{
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#searchbox{
+    border-bottom: 1px solid black;
+}
+#searchbox > input{
+    border: none;
+    padding: 5px;
+    width: 130px;
+    background-color: rgba(255, 255, 255, 0);
+}
+#searchbox > img{
+    width: 15px;
+}
+#mainMenu .new{
+    color: red;
+}
+#mainMenu .logo{
+    width: 155px;
+}
+/*============================드롭 서브 메뉴============================*/
+#mainMenu > ul > li{
+    position: relative;
+}
+#mainMenu .subMenu{
+    position: absolute;
+    top: 80px;
+    text-align: center;
+    background-color: white;
+    width: 130px;
+    padding: 10px 0px;
+    display: none;
+}
+#mainMenu > ul > li:hover .subMenu{
+    display: block;
+}
+/*============================본메뉴 sticky============================*/
+#mainMenu{
+    position: sticky;
+    top: 0px;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+/*============================2. 메인 이미지 CSS 작성============================*/
+#main_img{
+    width: 100%;
+}
+/*============================3. 본문 CSS 작성============================*/
+#content > .title{
+    margin-top: 50px;
+    font-size: 17px;
+    font-weight: bold;
+    text-align: center;
+}
+#content > .comment{
+    font-size: 10px;
+    text-align: center;
+    color: #999999;
+    margin: 20px 0px;
+}
+.items{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.item{
+    width: 380px;
+    margin: 30px 0px;
+}
+.item > .itemImg{
+    width: 100%;
+}
+.color > span{
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    border: 1px solid #DBDBDB;
+}
+.colorReview{
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0px;
+}
+.review{
+    color: #999999;
+}
+.itemName{
+    margin: 5px 0px;
+}
+.size{
+    font-size: 10px;
+    color: #999999;
+    margin: 1px 0px;
+}
+.itemPrice{
+    position: relative;
+    margin: 5px 0px;
+}
+.disc{
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    font-size: 15px;
+    color: red;
+    font-weight: bold;
+}
+.price{
+    text-decoration: line-through;
+    color: #999999;
+}
+/*============================4. 푸터 CSS 작성============================*/
+#footer{
+    margin-top: 100px;
+}
+#footerTop{
+    background-color: #999999;
+}
+#footerContent{
+    display: flex;
+    justify-content: space-between;
+    width: 1400px;
+    margin: 0 auto;
+    padding: 50px 100px;
+}
+#footerBottom{
+    text-align: center;
+    color: #999999;
+    margin: 30px 0px;
+    line-height: 160%;
+    font-size: 10px;
+}
+#footerContent h3{
+    margin: 10px 0px;
+    font-size: 16px;
+    font-weight: bold;
+}
+#footerContent h4{
+    margin: 10px 0px;
+    font-size: 18px;
+    font-weight: bold;
+}
+#footerContent ul > li{
+    margin-bottom: 10px;
+}
+/*============================4. 팝업 CSS 작성============================*/
+#popup{
+  position: fixed;      /* 디바이스 고정위치 */
+  right: 0px; top: 30%; /* 오른쪽 가운데 */
+}
+#popup img{ width: 20px;}
+#popup > ul > li{
+  padding: 14px;
+  border: 1px solid #dbdbdb;
+  background-color: #f7f7f7;
+  position: relative;
+}
+#popup > ul > li > span{
+  position: absolute;  top: 10px; right: 40px;
+  display: none;
+
+  width: 80px; height: 20px;
+  background-color: black; color: white;
+  border-radius: 5px; text-align: center;
+}
+#popup > ul > li:hover .popupSub{
+  display: inline;
+}
