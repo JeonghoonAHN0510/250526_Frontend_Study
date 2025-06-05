@@ -25,14 +25,50 @@ li{
 /*==============================메인 이미지 CSS==============================*/
 #mainImg{
     text-align: center;
-    font-size: 35px;
+    font-size: 50px;
+    padding: 130px 300px 70px 200px;
+    border-right: 1px solid #dde2e8;
+    line-height: 120%;
 }
 #mainImg img{
-    width: 600px;
-    height: 600px;
+    width: 650px;
+    height: 550px;
+}
+#mainImg span{
+    color: transparent;
+    /* 글자에 그라데이션 색 넣기 */
+    background: linear-gradient(to right, #ff5c00, #ff0069, #d300c5);
+    -webkit-background-clip: text;
 }
 /*==============================메인 내용 CSS==============================*/
+#mainContent{
+    width: 700px;
+    margin: 0 auto;
+}
+.mainContentInner{
+    width: 550px;
+    height: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    padding-top: 220px;
+}
+.mainContentInner > p{
+    font-size: 17px;
+    font-weight: bold;
+    padding-bottom: 20px;
+}
+.mainContentInner > input{
+    padding: 20px 15px;
+    margin-bottom: 15px;
+    border-radius: 15px;
+    border: 1px solid #ccd3db;
+}
 
+#mainContent img{
+    width: 150px;
+    height: 80px;
+}
 /*==============================푸터 CSS==============================*/
 
 /*==============================푸터 상단 CSS==============================*/
