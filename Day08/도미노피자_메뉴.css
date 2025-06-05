@@ -1,0 +1,73 @@
+/*
+inner - width 1200px
+img - width 276px, height 276px
+*/
+
+/*==============================공통 CSS==============================*/
+@import url('//fonts.googleapis.com/earlyaccess/notosanskr.css');
+*{  font-family: "Noto Sans";
+    padding: 0px; margin: 0px;
+    box-sizing: border-box;
+}
+li{ list-style: none; }
+a{ text-decoration: none;}
+/*==============================헤더 CSS==============================*/
+.headerTop, .mainMenuInner{
+    width: 1200px;
+    margin: 0 auto;
+}
+/*==============================헤더 상단 CSS==============================*/
+.headerLogo{
+    background: url(pizza_img/icons);
+    width: 155px;
+    height: 34px;
+}
+.headerTop{
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 0px;
+}
+.headerTop > ul{
+    display: flex;
+    align-items: center;
+}
+.headerLogin li{
+    margin-left: 20px;
+    font-size: 14px;
+    padding: 5px 0px;
+}
+.headerLogin a{
+    color: black;
+}
+.headerLogin select{
+    width: 60px;
+    height: 27px;
+    border-radius: 13px;
+    padding-left: 5px;
+    border: 1px solid #ddd;
+    color: gray;
+}
+
+
+/*==============================메인 메뉴 CSS==============================*/
+.mainMenu{
+    padding: 16px 0px;
+    font-size: 18px;
+    position: sticky;
+    top: 0px;
+    border-bottom: 1px solid #e4e4e4;
+}
+.mainMenuInner > ul{
+    display: flex;
+    justify-content: space-between;
+}
+.mainMenuInner a{ color: black;}
+.mainMenuInner1{
+    padding-right: 65px;
+}
+.mainMenuInner2{
+    padding: 0px 55px;
+}
+.mainMenuInner3{
+    padding-left: 65px;
+}
