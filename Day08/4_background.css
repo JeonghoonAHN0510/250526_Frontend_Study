@@ -1,0 +1,49 @@
+/* 1. background */
+.box{
+    border: 2px solid red;
+    padding: 30px;
+}
+.box p{
+    background-color: white;
+    padding: 5px;
+    border: 1px solid white;
+}
+.color1{
+    background-color: #0000ff /* 보통 실무에선 헥스코드 사용 
+    rgba(red,green,blue,투명도) : 1(100%) ~ 0(0%)
+    */
+
+}
+.img1{ /* background-image: url(파일 경로) - 이미지 위에 텍스트 넣고 싶을 때 */
+    background-image: url(background.jpg);
+    background-position: center; /* 이미지 위치 */
+    background-repeat: repeat; /* 기본값 */
+}
+.img2{
+    background-image: url(pattern.jpg);
+/* background-repeat: repeat; - 만약 비어있는 공간이 있으면 자동 채움(기본값) */
+    background-repeat: no-repeat; /* 자동 채우기 x */
+}
+.img3{
+    background-image: url(icon.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain; /* 비율을 유지하면서, 요소 안에 표시(빈 공간이 생길 수 있음) */
+    background-color: black; /* 만일 비어있는 공간이 있을 때 배경색을 넣을 수 있음 */
+}
+.img4{
+    background-image: url(background.jpg);  /* 배경 이미지 넣기 */
+    background-repeat: no-repeat;           /* no-repeat : 빈공간 자동 채우기 x */
+    background-size: cover;                 /* cover : 비율 유지, 잘림 가능 */
+    background-position: center;            /* 이미지의 위치 */
+    background-attachment: fixed;           /* 스크롤을 이동하며 배경이미지 이동 */
+    /* fixed : 텍스트는 지정요소와 고정되고, 배경은 스크롤에 따라 이동 */
+}
+
+.box2{
+    border: 1px solid red;
+    background-image: url(Naver_icon.png);  /* 지정된 요소의 사이즈 필수 */
+    width: 100px; height: 100px;
+    background-repeat: no-repeat;           /* 빈공간 자동 채우기 x */
+    background-position: -50px -300px;       /* 왼쪽 상단부터 */
+}
