@@ -52,10 +52,12 @@
     color: white;
     font-weight: bold;
 }
+
 /*
 :nth-of-type(odd)   : 형제들 중에 홀수만
 :nth-of-type(even)  : 형제들 중에 짝수만
 */
+
 .styleTable > tbody > tr:nth-of-type(odd){
     background-color: #eeeeee;
 }.styleTable > tbody tr:hover{
