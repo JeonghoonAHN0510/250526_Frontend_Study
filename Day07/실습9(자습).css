@@ -2,24 +2,23 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box;         /* 구역 사이즈에 테두리와 여백을 포함함. */
     font-size: 12px;
 }
 li{
-    list-style: none;
+    list-style: none;               /* 글머리 제거 */
 }
 a{
-    text-decoration: none;
+    text-decoration: none;          /* a태그의 밑줄 제거 */
     color: black;
 }
 /*============================레이아웃 CSS 작성============================*/
 #header{
     width: 100%;
-    display: contents;
+    display: contents;              /* display: contents를 넣으면서, #mainMenu가 body에 속하게 함 */
 }
 #content{
-    width: 1600px;
-    margin: 0 auto;
+    width: 1600px; margin: 0 auto;  /* 가로 중앙 정렬 */
 }
 #footer{
     width: 100%;
@@ -94,7 +93,7 @@ a{
 }
 /*============================본메뉴 sticky============================*/
 #mainMenu{
-    position: sticky;
+    position: sticky;/* sticky는 위치 속성이 없으면 적용 안 됨 */
     top: 0px;
     background-color: rgba(255, 255, 255, 0.8);
 }
@@ -130,7 +129,7 @@ a{
 .color > span{
     width: 10px;
     height: 10px;
-    display: inline-block;
+    display: inline-block;   /* display: inline-block으로 크기를 조절할 수 있게 됨. */
     border: 1px solid #DBDBDB;
 }
 .colorReview{
