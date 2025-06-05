@@ -47,3 +47,32 @@
     width: 200px;
     max-height: 100px;
 }
+
+/*==================================overflow==================================*/
+/* overflow : 지정요소보다 하위요소 크기가 더 커졌을 때 */
+.overflow > div{
+    width: 200px;
+    height: 100px;
+    background-color: beige;
+}
+/* overflow: visible; - 내용이 넘치면 그대로 보여준다.(기본값) */
+.overflow :nth-child(2){
+    overflow: visible;
+}
+/* overflow: hidden; - 내용이 넘치면 잘라내고 숨긴다. */
+.overflow :nth-child(4){
+    overflow: hidden;
+}
+/* overflow: scroll; - 항상 스크롤바를 표시한다. */
+.overflow :nth-child(6){
+    overflow: scroll;
+}
+/* overflow: auto; - 내용이 넘칠 때만 스크롤바를 표시한다. */
+.overflow :nth-child(8){
+    overflow: auto;
+}
+/* overflow-x, overflow-y - 가로, 세로 각각 따로 스크롤바 표시할 수 있다. */
+.overflow :nth-child(10){
+    overflow-x: scroll;
+    overflow-y: hidden;
+}

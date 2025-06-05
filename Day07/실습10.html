@@ -8,16 +8,17 @@
     </head>
 
     <body>
-        <div> <!-- 1. 메인 -->
-            <div> <!-- 메인 이미지 -->
+        <div id="main">                                       <!-- 1. 메인 -->
+            <div id="mainLogo">                               <!-- 메인 좌측 로고 -->
+                <img src="Instagram_logo.png"/>
+            </div>
+            <div id="mainImg">                                <!-- 메인 중앙 이미지 -->
                 <img src="instagram-image.png"/>
             </div>
-            <div> <!-- 메인 우측 -->
+            <div id="mainContent">                            <!-- 메인 내용 -->
+                <h4>Instagram으로 로그인</h4>
                 <div>
-                    instagram
-                </div>
-                <div>
-                    <input type="text" placeholder="전화번호, 사용자 이름 또는 이메일">
+                    <input type="text" placeholder="휴대폰 번호, 사용자 이름 또는 이메일 주소">
                 </div>
                 <div>
                     <input type="password" placeholder="비밀번호">
@@ -26,21 +27,15 @@
                     <button type="button">로그인</button>
                 </div>
                 <div>
-                    또는
+                    <button type="button">비밀번호를 잊으셨나요?</button>
                 </div>
                 <div>
-                    <a href="">Facebook으로 로그인</a>
+                    <button type="button">새 계정 만들기</button>
                 </div>
-                <div>
-                    <a href="">비밀번호를 잊으셨나요?</a>
-                </div>
-                <div>
-                    계정이 없으신가요?
-                    <a href="#">가입하기</a>
-                </div>
+                <img src="meta_logo.jfif"/>
             </div>
         </div>
-        <div> <!-- 2. 푸터 -->
+        <div id="footer"> <!-- 2. 푸터 -->
             <ul>
                 <li><a href="#">Meta</a></li>
                 <li><a href="#">소개</a></li>
@@ -59,7 +54,7 @@
             <ul>
                 <li><a href="#">한국어</a></li>
                 ν 표시
-                <li><a href="#">ⓒ 2025 Instagram from Meta</a></li>
+                <li>ⓒ 2025 Instagram from Meta</li>
             </ul>
         </div>
     </body>
