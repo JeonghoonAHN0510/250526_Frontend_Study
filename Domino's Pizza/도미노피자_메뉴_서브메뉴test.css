@@ -1,0 +1,146 @@
+/*
+inner - width 1200px
+img - width 276px, height 276px
+*/
+
+/*==============================공통 CSS==============================*/
+@import url('//fonts.googleapis.com/earlyaccess/notosanskr.css');
+*{  font-family: "Noto Sans";
+    padding: 0px; margin: 0px;
+    box-sizing: border-box;
+}
+li{ list-style: none; }
+a{  text-decoration: none;
+    color: black;
+}
+/*==============================헤더 CSS==============================*/
+.headerTop, .mainMenuInner, .subMenuInner{
+    width: 1200px;
+    margin: 0 auto;
+}
+/*==============================헤더 상단 CSS==============================*/
+.headerLogo{
+    background: url(pizza_img/icons);
+    width: 155px;
+    height: 34px;
+}
+.headerMap{
+    width: 345px;
+    height: 27px;
+    text-align: left;
+    border-bottom: 1px solid black;
+    padding-left: 5px;
+    font-size: 15px;
+}
+.headerMap span{
+    height: 16px;
+}
+.headerMap::before{
+    content: "";
+    width: 18px;
+    height: 16px;
+    background: url(pizza_img/icons) -164px 0px no-repeat;
+    display: inline-block;
+    margin-right: 5px;
+}
+.headerTop{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0px;
+}
+.headerTop > ul{
+    display: flex;
+    align-items: center;
+}
+.headerLogin li{
+    margin-left: 20px;
+    font-size: 14px;
+    padding: 5px 0px;
+}
+.headerLogin select{
+    width: 60px;
+    height: 27px;
+    border-radius: 13px;
+    padding-left: 5px;
+    border: 1px solid #ddd;
+    color: gray;
+}
+/*==============================메인 메뉴 CSS==============================*/
+.mainMenu{
+    padding: 16px 0px;
+    font-size: 18px;
+    position: sticky;
+    top: 0px;
+    border-bottom: 1px solid #e4e4e4;
+}
+.mainMenuInner > ul{
+    display: flex;
+    justify-content: space-between;
+}
+.mainMenuInner a{ color: black;}
+.mainMenuInner1{
+    padding-right: 65px;
+}
+.mainMenuInner2{
+    padding: 0px 55px;
+}
+.mainMenuInner3{
+    padding-left: 65px;
+}
+.mainMenuInner3 img{
+    width: 15px;
+    height: 15px;
+    padding-top: 2px;
+}
+/*==============================hover 메뉴 CSS==============================*/
+.mainMenuInner1:hover .mainMenuInner1-1{
+    border-bottom: 2px solid black;
+}
+.mainMenuInner2:hover .mainMenuInner2-1{
+    border-bottom: 2px solid black;
+}
+/*==============================서브 메뉴 CSS==============================*/
+.subMenuInner, .subMenuLeft{
+    display: flex;
+}
+#subMenu{
+    padding: 30px 0px 40px;
+    font-size: 15px;
+    line-height: 35px;
+
+}
+.subMenuLeft{
+    width: 800px;
+    height: 222px;
+    padding-right: 100px;
+}
+.subMenuLeft ul{
+    padding-right: 120px;
+    padding-top: 15px;
+}
+.subMenuList{
+    color: #555555;
+}
+.subMenuRight{
+    border-left: 1px solid #e4e4e4;
+    padding-left: 70px;
+    height: 160px;
+    margin-top: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.subMenuTop{
+    font-size: 17px;
+    color: #111;
+}
+.subMenuRight ul{
+    padding-top: 15px;
+}
+.subMenuRight ul a{
+    color: #888888;
+}
+.mainMenuInner3:hover #subMenu{
+    display: block;
+}
