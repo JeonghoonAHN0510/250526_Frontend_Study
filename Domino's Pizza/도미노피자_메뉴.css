@@ -10,7 +10,9 @@ img - width 276px, height 276px
     box-sizing: border-box;
 }
 li{ list-style: none; }
-a{ text-decoration: none;}
+a{  text-decoration: none;
+    color: black;
+}
 /*==============================헤더 CSS==============================*/
 .headerTop, .mainMenuInner{
     width: 1200px;
@@ -22,9 +24,29 @@ a{ text-decoration: none;}
     width: 155px;
     height: 34px;
 }
+.headerMap{
+    width: 345px;
+    height: 27px;
+    text-align: left;
+    border-bottom: 1px solid black;
+    padding-left: 5px;
+    font-size: 15px;
+}
+.headerMap span{
+    height: 16px;
+}
+.headerMap::before{
+    content: "";
+    width: 18px;
+    height: 16px;
+    background: url(pizza_img/icons) -164px 0px no-repeat;
+    display: inline-block;
+    margin-right: 5px;
+}
 .headerTop{
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 30px 0px;
 }
 .headerTop > ul{
@@ -36,9 +58,6 @@ a{ text-decoration: none;}
     font-size: 14px;
     padding: 5px 0px;
 }
-.headerLogin a{
-    color: black;
-}
 .headerLogin select{
     width: 60px;
     height: 27px;
@@ -47,8 +66,6 @@ a{ text-decoration: none;}
     border: 1px solid #ddd;
     color: gray;
 }
-
-
 /*==============================메인 메뉴 CSS==============================*/
 .mainMenu{
     padding: 16px 0px;
@@ -70,4 +87,16 @@ a{ text-decoration: none;}
 }
 .mainMenuInner3{
     padding-left: 65px;
+}
+.mainMenuInner3 img{
+    width: 15px;
+    height: 15px;
+    padding-top: 2px;
+}
+/*==============================hover 메뉴 CSS==============================*/
+.mainMenuInner1:hover .mainMenuInner1-1{
+    border-bottom: 2px solid black;
+}
+.mainMenuInner2:hover .mainMenuInner2-1{
+    border-bottom: 2px solid black;
 }
