@@ -119,6 +119,17 @@ a{  text-decoration: none;
 .Menu_Top ul li{
     padding-left: 5px;
 }
+.Menu_Top .Menu_Gray::after{
+    content: "";
+    margin: 4px 8px 2px 6px;
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-style: solid;
+    border-color: #888888 #888888;
+    border-width: 0 1px 1px 0;
+    transform: rotate(-45deg);
+}
 .Menu_Gray{
     color: #888888;
 }
