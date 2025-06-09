@@ -61,7 +61,7 @@ select:focus{
     font-size: 14px;
     padding: 5px 0px;
 }
-.headerLogin select{
+.language{
     width: 60px;
     height: 27px;
     border-radius: 13px;
@@ -69,9 +69,6 @@ select:focus{
     font-size: 12px;
     border: 1px solid #ddd;
     color: #888888;
-}
-.language{
-    font-size: 12px;
 }
 /*==============================메인 메뉴 CSS==============================*/
 .mainMenu{
@@ -131,6 +128,7 @@ select:focus{
 /*==============================푸터 상단 CSS==============================*/
 .footerTopInner{
     display: flex;
+    justify-content: space-between;
 }
 .footerTop{
     padding: 52px 0px;
@@ -156,7 +154,7 @@ select:focus{
     padding-bottom: 10px;
 }
 .footerTopLeft ul li a{
-    padding-right: 20px;
+    padding-right: 18px;
     color: #888888;
     font-size: 16px;
 }
@@ -181,7 +179,7 @@ select:focus{
     display: flex;
     justify-content: space-between;
     padding-top: 30px;
-    padding-left: 2px;
+    padding-left: 5px;
 }
 .footerRight2 span{
     font-size: 11px;
@@ -321,6 +319,7 @@ select:focus{
 }
 .Menu_title{
     font-size: 28px;
+    font-weight: 550;
     text-align: center;
     margin: 50px 0px;
 }
@@ -367,7 +366,7 @@ select:focus{
     font-size: 13px;
     color: #888888;
     line-height: 20px;
-    font-weight: 450;
+    font-weight: 420;
 }
 .Menu_Hashtag > span:nth-child(2){
     margin-top: 8px;

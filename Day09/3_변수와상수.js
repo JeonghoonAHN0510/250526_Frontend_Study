@@ -59,7 +59,7 @@ console.log(이름3)
 // [ 생각해보기 ]
 let point1 = 50                 // 변수명 : point1, 리터럴 : 50
 let point2 = 100                // 변수명 : point2, 리터럴 : 100
-let point3 = point1 + point3    // 변수명 : point3, 리터럴 : 150
+let point3 = point1 + point2    // 변수명 : point3, 리터럴 : 150
     // 위 코드에서 총 리터럴 개수? 3개
     // 리터럴1 + 리터럴2 = 새로운 리터럴3
     // 연산 : 계산을 통해 '하나'의 결과를 도출하는 행위
