@@ -4,9 +4,7 @@ img - width 276px, height 276px
 */
 
 /*==============================공통 CSS==============================*/
-@import url('//fonts.googleapis.com/earlyaccess/notosanskr.css');
-*{  font-family: "Noto Sans";
-    padding: 0px; margin: 0px;
+*{  padding: 0px; margin: 0px;
     box-sizing: border-box;
 }
 li{ list-style: none; }

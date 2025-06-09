@@ -4,18 +4,21 @@ img - width 276px, height 276px
 */
 
 /*==============================공통 CSS==============================*/
-@import url('//fonts.googleapis.com/earlyaccess/notosanskr.css');
-*{  font-family: "Noto Sans";
+*{  
     padding: 0px; margin: 0px;
     box-sizing: border-box;
 }
 li{ list-style: none; }
-a{  text-decoration: none;
+a{  
+    text-decoration: none;
     color: black;
 }
-.headerTop, .mainMenuInner, .footerTopInner, .footerBotInner, .Menu_content{
+.headerTop, .mainMenuInner, .footerTopInner, .footerBotInner{
     width: 1200px;
     margin: 0 auto;
+}
+select:focus{
+    outline: none;
 }
 /*==============================헤더 CSS==============================*/
 
@@ -67,7 +70,14 @@ a{  text-decoration: none;
     border: 1px solid #ddd;
     color: gray;
 }
+.language{
+    font-size: 12px;
+}
 /*==============================메인 메뉴 CSS==============================*/
+.Menu_content{
+    width: 1200px;
+    margin: 0 auto;
+}
 .mainMenu{
     padding: 16px 0px;
     font-size: 18px;
@@ -95,6 +105,17 @@ a{  text-decoration: none;
     height: 15px;
     padding-top: 2px;
 }
+.mainMenuInner3::after{
+    content: "";
+    margin: 0px 0px 4px 4px;
+    display: inline-block;
+    width: 9px;
+    height: 9px;
+    border-style: solid;
+    border-color: black;
+    border-width: 0px 0px 2px 2px;
+    transform: rotate(-45deg);
+}
 /*==============================hover 메뉴 CSS==============================*/
 .mainMenuInner1:hover .mainMenuInner1-1{
     border-bottom: 2px solid black;
@@ -102,6 +123,7 @@ a{  text-decoration: none;
 .mainMenuInner2:hover .mainMenuInner2-1{
     border-bottom: 2px solid black;
 }
+
 /*==============================본문 CSS==============================*/
 .Menu_Top{
     display: flex;
@@ -269,7 +291,7 @@ a{  text-decoration: none;
     background-color: black;
     color: white;
     font-size: 13px;
-    font-weight: 500;
+    font-weight: 400;
     padding: 15px 22px;
 }
 .Menu_AllergyBtn::after{
@@ -337,9 +359,6 @@ a{  text-decoration: none;
     border-right: white;
     border-left: white;
     color: #888888;
-}
-select:focus{
-  outline: none;
 }
 .footerRight2{
     display: flex;
