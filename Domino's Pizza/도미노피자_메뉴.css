@@ -79,6 +79,7 @@ select:focus{
     background-color: white;
     display: flex;
     border-bottom: 1px solid #ddd;
+    z-index: 50;
 }
 .mainMenuInner{
     padding-bottom: 17px;
@@ -330,6 +331,7 @@ select:focus{
 }
 .moreBox:hover .subMenu{
     display: block;
+    background-color: white;
 }
 
 
@@ -409,14 +411,35 @@ select:focus{
 }
 .Menu_prd{
     margin-bottom: 5px;
+    position: relative;
 }
 .Menu_prdImg{
     width: 276px;
     height: 276px;
 }
+.Menu_zoomIcon > span{
+    width: 16px;
+    height: 16px;
+    background: url(pizza_img/icon-zoomImg.png) no-repeat;
+    background-size: contain;
+    display: inline-block;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;    
+}
+.Menu_zoomIcon{
+    position: absolute;
+    bottom: 5px;
+    right: 0px;
+    width: 36px;
+    height: 36px;
+    background: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    line-height: 34px;
+}
 .Menu_prdName{
     font-size: 19px;
-    font-weight: 500;
+    font-weight: 450;
     line-height: 26px;
 }
 .Menu_prdLabel{
