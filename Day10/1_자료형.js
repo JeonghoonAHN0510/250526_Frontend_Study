@@ -55,3 +55,47 @@ console.log( 과일상자 );                        // 자료가 없는 변수�
 // [ null ] : 데이터의 값이 유효하지 않은 상태
 let 채소상자 = null;                            // 변수에 null이 입력된 상태, 라이브러리 함수들이 null을 반환하는 경우가 많음
 console.log( 채소상자 );                        // 자료가 존재 or 유효하지 않음
+
+/*
+[ 배열 ] : 하나의 변수에 여러 개의 값을 저장
+    - ,(쉼표)로 구분해서 [ ](대괄호)에 묶는다.
+    - 인덱스 : 순서대로 배정된 번호, 0 부터 시작]
+    - [ [ ] ] : 배열 안에 배열 가능
+*/
+let season = [ "봄" , "여름" , "가을" , "겨울" ];
+// 인덱스:  [0]    [1]      [2]      [3]         length = 4;
+// 배열 호출하기
+// 1. 배열 내 모든 요소 반환
+    console.log( season );
+// 2. 배열 내 특정 인덱스의 요소 반환
+    console.log( season[0] ); // 봄
+    console.log( season[1] ); // 여름
+    console.log( season[2] ); // 가을
+    console.log( season[3] ); // 겨울
+    console.log( season[4] ); // undefined : 존재하지 않는 인덱스여서
+    // [ 생각해보기 ]
+    // 변수 개수                : 1개(season)
+    // 리터럴 개수              : 4개("봄" , "여름" , "가을" , "겨울")
+    // 타입 개수                : 2개(문자열, 배열)
+    // 변수가 갖는 자료 개수    : 1개( [ ] )
+    // 변수 -> 배열 -> 문자열 4개
+// 3. 배열 수정
+    // 1) 배열 전체 수정 : 변수명 = [ 새로운 배열 ]
+        season = [ "유재석" , "강호동" ];
+        console.log( season );      // ['유재석', '강호동']
+    // 2) 배열 내 특정한 요소 수정 : 변수명[인덱스] = 새로운 값
+        season[1] = "신동엽";
+        console.log( season );      // ['유재석', '신동엽']
+// 4. 배열 내 요소 추가 : 변수명.push( 새로운 값 ), 맨 뒤에 추가된다.
+    season.push( "서장훈" )         // season[2] : 서장훈
+    console.log( season )           // ['유재석', '신동엽', '서장훈']
+// 5. 배열 내 요소 삭제 : 변수명.splice( 인덱스, 개수 )
+    season.splice( 0 , 1 )          // 0번 인덱스부터 1개 삭제
+    console.log( season )           // ['신동엽', '서장훈']
+// 6. 배열 내 특정 요소 찾기 : 변수명.indexof( 찾는 값 )
+    // 찾는 값이 배열 내 존재하면, 인덱스 반환
+    //                   존재하지 않으면, -1 반환
+        console.log( season.indexOf( "유재석") );          // -1 반환
+        console.log( season.indexOf( "신동엽") );          // 0 : 해당 인덱스 번호 반환
+        let result = season.indexOf( "서장훈" );           // result에 "서장훈" 인덱스 번호 저장
+        console.log( result );                             // 1 : 해당 인덱스 번호 반환

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset='utf-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <title>Page Title</title>
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+        <script src='main.js'></script>
+    </head>
+
+    <body>
+
+        <script src="JS실습3.js"></script>
+    </body>
+
+</html>
+
+<!-- 
+[ 실습3 ] 키오스크 설계 ( 지금은 코드치지말고, 설계와 분류부터 )
+    - 시나리오
+        1. 고객1(유재석)이 키오스크에서 '커피' 카테고리를 선택하여 아이스아메리카노 2개 주문 요청
+        2. 고객1은 주문번호를 받아서 대기 중
+        3. 고객2(강호동)이 키오스크에서 '커피' 카테고리를 선택하여 아메리카노 1개,
+            '스무디' 카테고리를 선택하여 사과스무디 2개 주문 요청
+        4. 고객2는 주문번호를 받아서 대기 중
+
+    - 결과
+        위 시나리오에 따른 필요한 데이터들을 찾아서, 변수와 자료형들을 이용한 구성
+
+********************************************************************
+let beverage = [ [coffee], [smoothie] ];
+let coffee = [ "카페라떼", "아이스아메리카노" ];
+let smoothie = [ "사과스무디" ];
+
+- 고객명
+let customer;
+prompt("이름을 입력하세요") = customer;
+
+
+- 주문번호
+let orderNumber = [ ];
+orderNumber.push("01");
+
+- 상품명
+
+
+
+- 수량 : quantity는 prompt로
+let quantity;
+prompt("수량을 입력하세요") = quantity;
+********************************************************************
+
+
+let order = [ "고객명", "주문번호", "상품명", "수량"]
+order[0] = customer;
+order[1] = orderNumber;
+order[2] = menu;
+order[3] = quantity;
+console.log( order );
+
+1. 저장할 자료 찾기
+    카테고리 : '커피', '스무디'
+    제품명 : '아이스아메리카노', '카페라떼', '사과스무디'
+    수량
+    대기번호
+
+2. 분류(자료형) 하기
+    카테고리 [ '커피', '스무디' ]
+    제품명 [ '아이스아메리카노', '카페라떼', '사과스무디' ]
+    수량(제품과의 연관)
+    대기번호
+
+*****************************************************************************
+    인덱스를 가지고 데이터를 구분하므로, 인덱스에 대한 구분이 깨지면 구분이 어렵다.
+    -> 해결책 : 객체지향 { }
+
+
+-->
