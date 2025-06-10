@@ -4,7 +4,7 @@
     width: 200px;
     height: 200px;
     position: fixed; /* 디바이스 화면에 위치 고정 */
-    bottom: 50px;
+    top: 50px;
     right: 50px;
     /* position 사용할 경우 다른 요소와 겹치는 경우 : z-index 
     z-index : 값이 클수록 앞에 표시된다. */

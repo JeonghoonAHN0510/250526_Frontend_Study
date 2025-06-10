@@ -40,13 +40,14 @@
 .parent{
     background-color: orange;
     padding: 10px;
-   
 }
 /* absolute 속성 사용시 주의점
 - 상위 요소 중에 가장 가까운 relative 기준으로 적용됨 */
 
 
-.box6{ /* box6의 상위 요소는 parent */
+.box6{ /* box6의 상위 요소는 parent이지만, 
+    parent가 position:relative;가 안됐기 때문에,
+    body에 종속됨. */
     background-color: beige;
     position: absolute;
     top: 100px;
