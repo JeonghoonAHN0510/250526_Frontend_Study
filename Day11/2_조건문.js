@@ -103,13 +103,13 @@ if ( gameScore >= 900 ) {                               // (2) 게임 점수가 
 // (1) 사용자 역할을 문자열로 입력받습니다.
 let role = String(prompt("[문제7]사용자 역할을 입력하세요."));
 
-if ( role == 'admin' ) {
+if ( role == 'admin' ) {                                            // (2) 역할이 admin이라면
     console.log("모든 기능에 접근할 수 있습니다.")
-} else if ( role == 'editor' ) {
+} else if ( role == 'editor' ) {                                    // (3) 역할이 editor라면
     console.log("콘텐츠 수정 및 생성 기능에 접근할 수 있습니다.")
-} else if ( role == 'viewer' ) {
+} else if ( role == 'viewer' ) {                                    // (4) 역할이 viewer라면
     console.log("콘텐츠 조회만 가능합니다.")
-} else {
+} else {                                                            // (5) 그 외 역할이라면
     console.log("정의되지 않은 역할입니다.")
 }
 
@@ -119,16 +119,17 @@ if ( role == 'admin' ) {
 // 8세 이상 19세 이하: '5,000원'
 // 20세 이상 65세 미만: '10,000원'
 // 65세 이상: '3,000원'
+// (1) 사용자의 나이를 정수로 입력받아
 let customerAge = Number(prompt("[문제8]나이를 입력하세요."));
 
-if ( customerAge < 8 ) {
-    console.log('무료')
-} else if ( customerAge >= 8 && customerAge <= 19 ) {
-    console.log('5,000원')
-} else if ( customerAge >= 20 && customerAge < 65 ) {
-    console.log('10,000원')
-} else {
-    console.log('3,000원')
+if ( customerAge < 8 ) {                                    // (2) 8세 미만이라면
+    console.log('무료')                                     // (3) true "무료" 출력
+} else if ( customerAge >= 8 && customerAge <= 19 ) {       // (4) 8세 이상 19세 이하라면
+    console.log('5,000원')                                  // (5) true "5,000원" 출력
+} else if ( customerAge >= 20 && customerAge < 65 ) {       // (6) 20세 이상 65세 미만이라면
+    console.log('10,000원')                                 // (7) true "10,000원" 출력
+} else {                                                    // (8) 그렇지 않으면(= 65세 이상이라면)
+    console.log('3,000원')                                  // (9) false "3,000원" 출력
 }
 
 // 문제 9: 성적 등급 계산
@@ -137,22 +138,35 @@ if ( customerAge < 8 ) {
 // 80점 이상 90점 미만: 'B등급'
 // 70점 이상 80점 미만: 'C등급'
 // 70점 미만: '재시험'
+// (1) 하나의 점수를 입력받아
 let score9 = Number(prompt("[문제9]점수를 입력하세요."));
 
-if ( score9 >= 90 ) {
-    console.log('A등급')
-} else if ( score9 < 90 && score9 >= 80 ) {
-    console.log('B등급')
-} else if ( score9 < 80 && score9 >= 70 ) {
-    console.log('C등급')
-} else {
-    console.log('재시험')
+if ( score9 >= 90 ) {                           // (2) 90점 이상이라면
+    console.log('A등급')                        // (3) true "A등급" 출력
+} else if ( score9 < 90 && score9 >= 80 ) {     // (4) 80점 이상 90점 미만이라면
+    console.log('B등급')                        // (5) true "B등급" 출력
+} else if ( score9 < 80 && score9 >= 70 ) {     // (6) 70점 이상 80점 미만이라면
+    console.log('C등급')                        // (7) true "C등급" 출력
+} else {                                        // (8) 그렇지 않으면(=70점 미만이라면)
+    console.log('재시험')                       // (9) false "재시험" 출력
 }
 
 // 문제 10: 음료 자판기
 // 다음 음료 목록 배열이 주어져 있습니다.
 // 음료 이름 목록 : let drinkNames = ['콜라', '사이다', '커피'];
 // 음료 가격 목록 : let drinkPrices = [1000, 1000, 1500];
-// 사용자로부터 원하는 음료(0, 1, 2)의 번호를 입력받아, 해당하는 음료 이름과 가격을 '선택하신 음료는 [음료이름]입니다. 가격은 [가격]원입니다.' 형식으로 출력하세요. 만약 목록에 없는 번호를 입력하면 '없는 상품입니다.'라고 출력하는 프로그램을 작성하시오.
+// 사용자로부터 원하는 음료(0, 1, 2)의 번호를 입력받아, 해당하는 음료 이름과 가격을 '선택하신 음료는 [음료이름]입니다. 가격은 [가격]원입니다.' 형식으로 출력하세요. 
+// 만약 목록에 없는 번호를 입력하면 '없는 상품입니다.'라고 출력하는 프로그램을 작성하시오.
+// (1) 음료 목록 배열 선언
+let drinkNames = ['콜라', '사이다', '커피'];
+let drinkPrices = [1000, 1000, 1500];
+// (2) 사용자로부터 원하는 음료 번호를 입력받아
+let drinkNumber = Number(prompt("[문제10]원하는 음료 번호를 입력하세요.(0, 1, 2)"))
 
-
+if ( drinkNumber == 0 ) {
+    console.log(`선택하신 음료는 ${drinkNames[0]}입니다. 가격은 ${drinkPrices[0]}원입니다.`)
+} else if ( drinkNumber == 1 ) {
+    console.log(`선택하신 음료는 ${drinkNames[1]}입니다. 가격은 ${drinkPrices[1]}원입니다.`)
+} else {
+    console.log(`선택하신 음료는 ${drinkNames[2]}입니다. 가격은 ${drinkPrices[2]}원입니다.`)
+}
