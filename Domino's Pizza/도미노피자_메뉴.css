@@ -82,7 +82,6 @@ select:focus{
     z-index: 50;
 }
 .mainMenuInner{
-    padding-bottom: 17px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -116,6 +115,9 @@ select:focus{
 }
 .mainMenuInner2:hover .mainMenuInner2-1{
     border-bottom: 2px solid black;
+}
+.subMenuBox a:hover .subMenuBox1-1{
+    border-bottom: 1px solid #555;
 }
 /*==============================푸터 CSS==============================*/
 #footer{
@@ -259,7 +261,7 @@ select:focus{
 /*==============================더보기 박스 CSS==============================*/
 .moreBox {
     position: absolute;
-    top: 58px;
+    top: 56px;
     left: 0;
     right: 0;
     z-index: 2;
@@ -322,14 +324,20 @@ select:focus{
     color: #888;
     font-size: 15px;
 }
+.subMenuRight li a::before{
+    content: "-";
+    display: inline-block;
+    padding-right: 2px;
+}
 #hoverBox:hover .moreBox{
     display: block;
 }
 #hoverBox{
     width: 120px;
-    height: 25px;
+    height: 40px;
     display: flex;
     justify-content: flex-end;
+    border: 1px red solid;
 }
 
 
