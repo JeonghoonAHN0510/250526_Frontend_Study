@@ -8,7 +8,9 @@ img - width 276px, height 276px
     padding: 0px; margin: 0px;
     box-sizing: border-box;
 }
-li{ list-style: none; }
+.headerTop li{ list-style: none; }
+.mainMenu li{list-style: none;}
+#footer li{list-style: none;}
 a{  
     text-decoration: none;
     color: black;
@@ -335,224 +337,228 @@ select:focus{
     justify-content: flex-end;
 }
 
+/* 메인 css*/
+.gift_sub-type menu{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    letter-spacing: -0.75px;
+}
 
+.page-title {
+    position: relative;
+    margin-top: 40px;
+}
+h2{
+    line-height: 1em;
+}
+.page-title-header{
+    padding: 10px;
+    font-size: 32px;
+    font-weight: 400;
+    color: #111;
+}
 
+.depth-area{
+    position: absolute;
+    right: 0;
+    top: 16px;
+}
 
+.depth-area ol{
+    list-style: none;
+}
 
+.depth-area ol li{
+    display: inline-block;
+    font-size: 13px;
+    
+}
 
+a{
+    text-decoration: none;
+    color: #888888;
+}
 
+.list-text{
+    font-size: 13px;
+    color: #888888;
+    line-height: 24px;
+    position: relative;
+    padding-left: 12px;
+    margin-left: 40px;
 
+}
 
-
-
-/* 개인 CSS 시작 */
-/*==============================본문 CSS==============================*/
-.Menu_content{
+.list-red{
+    color: #ff143C;
+}
+.inner-box {
+    position: relative;
     width: 1200px;
     margin: 0 auto;
 }
-.Menu_Top{
-    display: flex;
-    justify-content: space-between;
-    padding-top: 30px;
-}
-.Menu_Top p{
-    font-size: 32px;
-    font-weight: 300;
-}
-.Menu_Top ul{
-    display: flex;
-    align-items: end;
-    font-size: 13px;
-}
-.Menu_Top ul li{
-    padding-left: 5px;
-}
-.Menu_Top .Menu_Gray::after{
-    content: "";
-    margin: 4px 8px 2px 6px;
-    display: inline-block;
-    width: 6px;
-    height: 6px;
-    border-style: solid;
-    border-color: #888888 #888888;
-    border-width: 0 1px 1px 0;
-    transform: rotate(-45deg);
-}
-.Menu_Gray{
-    color: #888888;
-}
-.Menu_List{
-    border-bottom: 2px solid black;
-}
-.Menu_List ul{
-    display: flex;
-    margin: 28px 0px 15px;
-}
-.Menu_Gray a{
-    color: #888888;
-}
-.Menu_List ul .Menu_Gray::before{
-    display: inline-block;
-    content: "";
-    width: 1px;
-    height: 14px;
-    background-color: #ddd;
-    margin: 2px 20px 0px;
-}
-.Menu_title{
-    font-size: 28px;
-    font-weight: 550;
-    text-align: center;
-    margin: 40px 0px;
-}
-.Menu_Item{
-    width: 276px;
-    margin-bottom: 60px;
-}
-.Menu_prd{
-    margin-bottom: 5px;
+
+.menu-nav-wrap{
     position: relative;
+    margin-top: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #111;
 }
-.Menu_prdImg{
+
+
+.category-bar {
+  display: flex;
+  list-style: none;
+  gap: 0; /* 간격은 ::after에서 조정 */
+}
+
+
+.category-bar li {
+  position: relative;
+  padding: 0 15px; /* 항목 간 좌우 여백 */
+}
+
+.category-bar li.after::after {
+  content: '|';
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #ccc;
+  padding-left: 8px;
+}
+
+.category-bar li:last-child::after {
+  content: none; /* 마지막 항목에는 구분자 제거 */
+}
+
+
+
+.dominocon-guide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #eee;
+}
+
+.dominocon-img{
+    padding-right: 40px;
+}
+
+.dominocon-guide .dominocon-img img {
+    width: 123px;
+    border: 0;
+}
+
+.menu-list.ect-type > ul{
+    display: flex;
+}
+
+.prd-list-rgt{
+    list-style: none;
     width: 276px;
-    height: 276px;
+    margin: 10px;
 }
-.Menu_zoomIcon > span{
-    width: 16px;
-    height: 16px;
-    background: url(https://cdn.dominos.co.kr/domino/pc/images/sp/ico-zoomImg.png) no-repeat;
-    background-size: contain;
-    display: inline-block;
-    position: absolute;
-    bottom: 10px;
-    right: 10px;    
-}
-.Menu_zoomIcon{
-    position: absolute;
-    bottom: 5px;
-    right: 0px;
-    width: 36px;
-    height: 36px;
-    background: rgba(0, 0, 0, 0.5);
-    text-align: center;
-    line-height: 34px;
-}
-.Menu_prdName{
-    font-size: 19px;
-    font-weight: 450;
-    line-height: 26px;
-}
-.Menu_prdLabel{
-    background-color: red;
-    color: white;
-    border-radius: 2px;
-    height: 16px;
-    font-size: 9px;
-    font-weight: 700;
-    padding: 1px 5px;
-    line-height: 16px;
-}
-.Menu_prdPrice{
-    margin: 12px 0px 18px;
-    font-weight: 700;
-    font-size: 16px;
-}
-.Menu_prdPrice > span:nth-child(3){
-    margin-left: 18px;
-}
-.Menu_prdSize{
-    color: red;
-    margin-right: 8px;
-}
-.Menu_Hashtag span{
-    display: block;
-    font-size: 13px;
-    color: #888888;
-    line-height: 20px;
-    font-weight: 420;
-}
-.Menu_Hashtag > span:nth-child(2){
-    margin-top: 8px;
-}
-.Menu_MenuList{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-.Menu_PremiumBot{
-    display: flex;
-}
-.Menu_PremiumBot > .Menu_Item{
-    margin-right: 32px;
-}
-.Menu_Bot{
-    display: flex;
-    border-top: 0.5px solid black;
-    padding: 50px 0px 100px;
-    color: #888888;
-}
-.Menu_Note ul{
-    border-right: 1px solid #f5f5f5;
-    padding-right: 100px;
-}
-.Menu_Note li{
-    line-height: 24px;
-}
-.Menu_Note li:nth-child(1){
+
+
+.product-details {
+    padding-top: 10px;
     font-size: 14px;
 }
-.Menu_Note li:nth-child(1)::before{
-    content: "※";
-    padding-right: 4px;
-}
-.Menu_Note li:nth-child(3),
-.Menu_Note li:nth-child(4){
-    padding-left: 9px;
-}
-.Menu_Note li:nth-child(2),
-.Menu_Note li:nth-child(3),
-.Menu_Note li:nth-child(4),
-.Menu_Note li:nth-child(5),
-.Menu_Note li:nth-child(6){
-    font-size: 13px;
-}
-.Menu_Note li:nth-child(2)::before,
-.Menu_Note li:nth-child(5)::before,
-.Menu_Note li:nth-child(6)::before{
-    content: "·";
+
+.product-details .title {
+    padding-top: 5px;
+    margin-bottom: 10px;
+    height: 40px;
     font-weight: bold;
-    padding-right: 5px;
+    font-size: 18px;
 }
-.Menu_Allergy{
+
+.product-details .price {
+    font-weight: bold;
+    padding-top: 5px;
+}
+
+.quantity-container {
+    display: flex;
+    margin-top: 15px;
+    width: 100%;
+}
+
+.quantity-container button {
+    width: 60px;
+    height: 50px;
+    font-size: 18px;
+    border: 1px solid #ccc;
+    background: #fff;
+}
+
+.quantity-container input {
+    width: 70px;
+    height: 50px;
     text-align: center;
-    width: 587px;
+    border: 1px solid #ccc;
+    border-left: none;
+    border-right: none;
 }
-.Menu_Allergy1{
-    font-size: 13px;
-    padding: 25px 0px;
-}
-.Menu_Allergy2{
-    text-align: center;
-    display: inline-block;
-}
-.Menu_AllergyBtn{
-    background-color: black;
+
+.add-button {
+    margin-top: 10px;
+    width: 120px;
+    height: 50px;
+    background-color: #ff143c;
     color: white;
-    font-size: 13px;
-    font-weight: 400;
-    padding: 15px 22px;
+    border: none;
+    padding: 8px 0;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
 }
-.Menu_AllergyBtn::after{
-    content: "";
-    transform: rotate(-45deg);
-    top: 20px;
-    right: 20px;
+
+.menu-list{
+    margin-bottom: 80px;
+}
+
+.menu-list-area2{
+    margin-bottom: 80px;
+}
+
+.menu-list.ect-type{
+    position: absolute;
+    padding-top: 50px;
+}
+.menu-list-area2 > ul{
+    display: flex;
+    width: 100%;
+    padding: 30px;
+    font-size: 0;
+    justify-content: center;
+
+}
+
+.menu-list.ect-type li{
+    position: relative;
     display: inline-block;
-    width: 9px;
-    height: 9px;
-    border-style: solid;
-    border-color: white;
-    border-width: 0 1px 1px 0;
+    width: 276px;
+    margin-left: 32px;
+    font-size: 14px;
+    vertical-align: top;
 }
-/* 개인 CSS 끝 */
+
+img{
+    border: 0;
+    width: 100%;
+}
+.button-box{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: 10px;
+}
+
+.product-card{
+    width: 100%;
+}

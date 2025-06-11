@@ -336,223 +336,110 @@ select:focus{
 }
 
 
-
-
-
-
-
-
-
-
-
-/* 개인 CSS 시작 */
-/*==============================본문 CSS==============================*/
-.Menu_content{
-    width: 1200px;
+/*====== 로그인상단 css ======*/
+#login_1{
+   width: 1200px;
+   margin: 0 auto;
+}
+#login_2{
+    width: 600px;
     margin: 0 auto;
 }
-.Menu_Top{
+#login-title{
     display: flex;
     justify-content: space-between;
-    padding-top: 30px;
-}
-.Menu_Top p{
-    font-size: 32px;
-    font-weight: 300;
-}
-.Menu_Top ul{
-    display: flex;
-    align-items: end;
-    font-size: 13px;
-}
-.Menu_Top ul li{
-    padding-left: 5px;
-}
-.Menu_Top .Menu_Gray::after{
-    content: "";
-    margin: 4px 8px 2px 6px;
-    display: inline-block;
-    width: 6px;
-    height: 6px;
-    border-style: solid;
-    border-color: #888888 #888888;
-    border-width: 0 1px 1px 0;
-    transform: rotate(-45deg);
-}
-.Menu_Gray{
-    color: #888888;
-}
-.Menu_List{
+    align-items: baseline;
+    margin: 50px 0px 0px;
+    padding: 0px 0px 28px;
     border-bottom: 2px solid black;
+    width: 1200px;
+   
 }
-.Menu_List ul{
+.로그인{font-size: 33px;}
+.홈_로그인 span{ color: grey;}
+
+/*===== 로그인 가운데 =====*/
+.login_main{
+     border: 1px solid black;
+     width: 500px; height: 65px;
+     margin-top: 60px;
+     margin-bottom: 70px;
+     padding: 15px 0px 0px 0px;
+}
+.login_box{
+   display: flex;
+   justify-content: space-evenly
+}
+/*.login_box2{
+    width: 250px; height: 65px;
+    background-color: #eeeeee;
+    color: grey;
+    text-align: center;
+}
+*/
+.login_content{
+    margin-top: 60px;
+    
+
+}
+.login_id, .login_pwd{
+    width: 500px; height: 45px;
+    margin-top: 15px;
+    padding: 0px 20px;
+    border: 2px solid #eeeeee;
+   
+}
+
+.login_content1{
     display: flex;
-    margin: 28px 0px 15px;
+    justify-content: space-between;
+    margin-top: 20px;
+    color: grey;
+    margin-bottom: 20px;
+    
 }
-.Menu_Gray a{
-    color: #888888;
-}
-.Menu_List ul .Menu_Gray::before{
-    display: inline-block;
-    content: "";
-    width: 1px;
-    height: 14px;
-    background-color: #ddd;
-    margin: 2px 20px 0px;
-}
-.Menu_title{
-    font-size: 28px;
-    font-weight: 550;
-    text-align: center;
-    margin: 40px 0px;
-}
-.Menu_Item{
-    width: 276px;
-    margin-bottom: 60px;
-}
-.Menu_prd{
-    margin-bottom: 5px;
-    position: relative;
-}
-.Menu_prdImg{
-    width: 276px;
-    height: 276px;
-}
-.Menu_zoomIcon > span{
-    width: 16px;
-    height: 16px;
-    background: url(https://cdn.dominos.co.kr/domino/pc/images/sp/ico-zoomImg.png) no-repeat;
-    background-size: contain;
-    display: inline-block;
-    position: absolute;
-    bottom: 10px;
-    right: 10px;    
-}
-.Menu_zoomIcon{
-    position: absolute;
-    bottom: 5px;
-    right: 0px;
-    width: 36px;
-    height: 36px;
-    background: rgba(0, 0, 0, 0.5);
-    text-align: center;
-    line-height: 34px;
-}
-.Menu_prdName{
-    font-size: 19px;
-    font-weight: 450;
-    line-height: 26px;
-}
-.Menu_prdLabel{
+.login_2{
+    border: 1px solid red;
+    width: 500px ; height: 60px;
     background-color: red;
     color: white;
-    border-radius: 2px;
-    height: 16px;
-    font-size: 9px;
-    font-weight: 700;
-    padding: 1px 5px;
-    line-height: 16px;
-}
-.Menu_prdPrice{
-    margin: 12px 0px 18px;
-    font-weight: 700;
-    font-size: 16px;
-}
-.Menu_prdPrice > span:nth-child(3){
-    margin-left: 18px;
-}
-.Menu_prdSize{
-    color: red;
-    margin-right: 8px;
-}
-.Menu_Hashtag span{
-    display: block;
-    font-size: 13px;
-    color: #888888;
-    line-height: 20px;
-    font-weight: 420;
-}
-.Menu_Hashtag > span:nth-child(2){
-    margin-top: 8px;
-}
-.Menu_MenuList{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-.Menu_PremiumBot{
-    display: flex;
-}
-.Menu_PremiumBot > .Menu_Item{
-    margin-right: 32px;
-}
-.Menu_Bot{
-    display: flex;
-    border-top: 0.5px solid black;
-    padding: 50px 0px 100px;
-    color: #888888;
-}
-.Menu_Note ul{
-    border-right: 1px solid #f5f5f5;
-    padding-right: 100px;
-}
-.Menu_Note li{
-    line-height: 24px;
-}
-.Menu_Note li:nth-child(1){
-    font-size: 14px;
-}
-.Menu_Note li:nth-child(1)::before{
-    content: "※";
-    padding-right: 4px;
-}
-.Menu_Note li:nth-child(3),
-.Menu_Note li:nth-child(4){
-    padding-left: 9px;
-}
-.Menu_Note li:nth-child(2),
-.Menu_Note li:nth-child(3),
-.Menu_Note li:nth-child(4),
-.Menu_Note li:nth-child(5),
-.Menu_Note li:nth-child(6){
-    font-size: 13px;
-}
-.Menu_Note li:nth-child(2)::before,
-.Menu_Note li:nth-child(5)::before,
-.Menu_Note li:nth-child(6)::before{
-    content: "·";
-    font-weight: bold;
-    padding-right: 5px;
-}
-.Menu_Allergy{
     text-align: center;
-    width: 587px;
+    padding: 12px 0px;
+    margin-bottom: 10px;
+
 }
-.Menu_Allergy1{
-    font-size: 13px;
-    padding: 25px 0px;
-}
-.Menu_Allergy2{
+.login_3{
+    border: 1px solid grey;
+    width: 500px ; height: 60px;
     text-align: center;
-    display: inline-block;
+    padding: 12px 0px;
+    margin-bottom: 50px;
 }
-.Menu_AllergyBtn{
-    background-color: black;
-    color: white;
-    font-size: 13px;
-    font-weight: 400;
-    padding: 15px 22px;
+.login_title1{
+    text-align: center;
+    margin-bottom: 45px;
+    
 }
-.Menu_AllergyBtn::after{
-    content: "";
-    transform: rotate(-45deg);
-    top: 20px;
-    right: 20px;
-    display: inline-block;
-    width: 9px;
-    height: 9px;
-    border-style: solid;
-    border-color: white;
-    border-width: 0 1px 1px 0;
+.login_list{
+    display: flex;
+    justify-content: space-evenly;
 }
-/* 개인 CSS 끝 */
+.login_list img{
+    width: 42px; height: 42px;
+    object-fit: cover;
+
+
+}
+
+
+input:focus{
+    outline: ;
+}
+
+
+
+
+
+
+
+
