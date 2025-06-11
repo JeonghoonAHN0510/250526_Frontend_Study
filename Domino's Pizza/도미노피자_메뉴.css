@@ -320,14 +320,7 @@ select:focus{
 }
 .subMenuRight li a {
     color: #888;
-}
-.subMenuRight a {
-    padding: 8px 0;
-    display: block;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    width: 270px;
+    font-size: 15px;
 }
 #hoverBox:hover .moreBox{
     display: block;
@@ -335,7 +328,6 @@ select:focus{
 #hoverBox{
     width: 120px;
     height: 25px;
-    
     display: flex;
     justify-content: flex-end;
 }
