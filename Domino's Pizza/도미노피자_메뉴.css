@@ -421,7 +421,7 @@ select:focus{
 .Menu_zoomIcon > span{
     width: 16px;
     height: 16px;
-    background: url(pizza_img/icon-zoomImg.png) no-repeat;
+    background: url(https://cdn.dominos.co.kr/domino/pc/images/sp/ico-zoomImg.png) no-repeat;
     background-size: contain;
     display: inline-block;
     position: absolute;
