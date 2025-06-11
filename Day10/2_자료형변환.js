@@ -1,6 +1,6 @@
 // [ 자동 형 변환 ]
     // 1) 문자열 숫자에 * 1을 하면 문자열 숫자가 숫자형 숫자로 변환된다. ( "10" vs 10 )
-let input = prompt("숫자를 입력하세요.");   // 5 , prompt함수는 항상 문자열만 반환한다.
+let input = prompt("숫자를 입력하세요.");    // 5 , prompt함수는 항상 문자열만 반환한다.
                                             // let input = "5"
 console.log( typeof input );                // String
 

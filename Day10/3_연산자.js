@@ -1,4 +1,4 @@
-//[ 연산자 ] : 특정한 동작을 하도록 지시하는 기호
+// [ 연산자 ] : 특정한 동작을 하도록 지시하는 기호
 // 1. 산술 연산자 : 하나의 연산 결과를 (숫자)로 반환
 //        +  -  *  /  %
 console.log( 10 + 3 );  // 13
@@ -23,12 +23,14 @@ let everage = parseFloat(Number(totalScore) / 3);
 
 console.log( `총점 : ${totalScore}` );
 console.log( `평균 : ${everage}` );
+
 // [지문2] prompt 함수로 반지름를 입력받아서 원넓이[반지름*반지름*3.14] 계산하여 console탭에 출력하시오.
 let radius = prompt("반지름을 입력하세요.");
 
 let extent = parseFloat(Number(radius) * Number(radius) * 3.14);
 
 console.log( `원넓이 : ${extent}` );
+
 // [지문3] prompt 함수로 두 실수를 입력받아서 앞 실수의 값이 뒤실수의 값의 비율% 계산하여 console탭에 출력하시오.
 let float1 = Number(prompt("실수1을 입력하세요."));
 let float2 = Number(prompt("실수2을 입력하세요."));
