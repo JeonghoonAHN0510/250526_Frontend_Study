@@ -23,7 +23,7 @@ select:focus{
 /*==============================헤더 CSS==============================*/
 /*==============================헤더 상단 CSS==============================*/
 .headerLogo{
-    background: url(pizza_img/icons);
+    background: url(https://cdn.dominos.co.kr/domino/pc/images/sp/sp_common.png);
     width: 155px;
     height: 34px;
 }
@@ -42,7 +42,7 @@ select:focus{
     content: "";
     width: 18px;
     height: 16px;
-    background: url(pizza_img/icons) -164px 0px no-repeat;
+    background: url(https://cdn.dominos.co.kr/domino/pc/images/sp/sp_common.png) -164px 0px no-repeat;
     display: inline-block;
     margin-right: 5px;
 }
@@ -72,12 +72,19 @@ select:focus{
 }
 /*==============================메인 메뉴 CSS==============================*/
 .mainMenu{
-    padding: 16px 0px;
+    padding-top: 16px;
     font-size: 18px;
     position: sticky;
     top: 0px;
-    border-bottom: 1px solid #e4e4e4;
     background-color: white;
+    display: flex;
+    border-bottom: 1px solid #ddd;
+    z-index: 50;
+}
+.mainMenuInner{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 .mainMenuInner > ul{
     display: flex;
@@ -85,19 +92,12 @@ select:focus{
 }
 .mainMenuInner a{ color: black;}
 .mainMenuInner1{
-    padding-right: 65px;
+    padding-right: 90px;
 }
 .mainMenuInner2{
     padding: 0px 55px;
 }
-.mainMenuInner3{
-    padding-left: 65px;
-}
-.mainMenuInner3 img{
-    width: 15px;
-    height: 15px;
-    padding-top: 2px;
-}
+
 .mainMenuInner3::after{
     content: "";
     margin: 0px 0px 4px 4px;
@@ -116,11 +116,9 @@ select:focus{
 .mainMenuInner2:hover .mainMenuInner2-1{
     border-bottom: 2px solid black;
 }
-
-
-
-
-
+.subMenuBox a:hover .subMenuBox1-1{
+    border-bottom: 1px solid #555;
+}
 /*==============================푸터 CSS==============================*/
 #footer{
     border-top: 1px solid #ddd;
@@ -143,7 +141,7 @@ select:focus{
     padding-left: 13px;
 }
 .footerLogo{
-    background: url(pizza_img/icons);
+    background: url(https://cdn.dominos.co.kr/domino/pc/images/sp/sp_common.png);
     background-position: 0 -47px;
     width: 123px;
     height: 30px;
@@ -186,44 +184,44 @@ select:focus{
     margin-top: 4px;
 }
 .appleIcon{
-    background: url(pizza_img/icons) no-repeat;
+    background: url(https://cdn.dominos.co.kr/domino/pc/images/sp/sp_common.png) no-repeat;
     background-position: -447px 0px;
     width: 20px;
     height: 26px;
 }
 .androidIcon{
-    background: url(pizza_img/icons) no-repeat;
+    background: url(https://cdn.dominos.co.kr/domino/pc/images/sp/sp_common.png) no-repeat;
     background-position: -478px 0px;
     width: 22px;
     height: 23px;
     margin-top: 2px;
 }
 .blogIcon{
-    background: url(pizza_img/icons) no-repeat;
+    background: url(https://cdn.dominos.co.kr/domino/pc/images/sp/sp_common.png) no-repeat;
     background-position: -509px 0px;
     width: 13px;
     height: 20px;
 }
 .instaIcon{
-    background: url(pizza_img/icons) no-repeat;
+    background: url(https://cdn.dominos.co.kr/domino/pc/images/sp/sp_common.png) no-repeat;
     background-position: -532px 0px;
     width: 21px;
     height: 21px;
 }
 .facebookIcon{
-    background: url(pizza_img/icons) no-repeat;
+    background: url(https://cdn.dominos.co.kr/domino/pc/images/sp/sp_common.png) no-repeat;
     background-position: -563px 0px;
     width: 11px;
     height: 22px;
 }
 .youtubeIcon{
-    background: url(pizza_img/icons) no-repeat;
+    background: url(https://cdn.dominos.co.kr/domino/pc/images/sp/sp_common.png) no-repeat;
     background-position: -584px 0px;
     width: 25px;
     height: 19px;
 }
 .twitterIcon{
-    background: url(pizza_img/icons) no-repeat;
+    background: url(https://cdn.dominos.co.kr/domino/pc/images/sp/sp_common.png) no-repeat;
     background-position: -619px 0px;
     width: 23px;
     height: 19px;
@@ -259,4 +257,80 @@ select:focus{
     font-size: 10px;
     color: #888888;
     padding-left: 10px;
+}
+/*==============================더보기 박스 CSS==============================*/
+.moreBox {
+    position: absolute;
+    top: 56px;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    padding: 29px 0 40px;
+    border-top: 1px solid #ddd;
+    background: #fff;
+    display: none;
+}
+.subMenuLeft {
+    display: flex;
+    width: 794px;
+    padding-right: 100px;
+}
+.subMenuBox {
+    width: 178px;
+    margin-right: 70px;
+}
+.subMenuBox a {
+    display: block;
+    padding: 10px 0;
+    font-size: 17px;
+    color: black;
+}
+.subMenuBox ul {
+    margin-top: 10px;
+}
+.subMenuBox li a {
+    display: inline-block;
+    position: relative;
+    font-size: 15px;
+    color: #555;
+}
+.subMenuInner{
+    position: relative;
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+}
+.subMenuRight {
+    display: inline-block;
+    width: 270px;
+    padding: 22px 0 23px 70px;
+    margin-top: 10px;
+    border-left: 1px solid #ddd;
+    vertical-align: top;
+}
+.subMenuRight a {
+    padding: 8px 0;
+    display: block;
+    width: 270px;
+}
+.subMenuRight ul {
+    margin-top: 16px;
+}
+.subMenuRight li a {
+    color: #888;
+    font-size: 15px;
+}
+.subMenuRight li a::before{
+    content: "-";
+    display: inline-block;
+    padding-right: 2px;
+}
+#hoverBox:hover .moreBox{
+    display: block;
+}
+#hoverBox{
+    width: 120px;
+    height: 40px;
+    display: flex;
+    justify-content: flex-end;
 }
