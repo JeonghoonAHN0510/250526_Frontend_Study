@@ -337,7 +337,6 @@ select:focus{
     height: 40px;
     display: flex;
     justify-content: flex-end;
-    border: 1px red solid;
 }
 
 
