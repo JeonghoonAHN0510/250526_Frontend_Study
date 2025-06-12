@@ -121,7 +121,7 @@ if ( year % 4 == 0 && year % 100 != 0 ){
 // 문제 7: 세 수 오름차순 정렬
 // 서로 다른 세 개의 정수를 입력받아, 오름차순(작은 수부터 큰 수 순서)으로 정렬하여 출력하는 프로그램을 작성하시오.
 // 예시: 17, 4, 8 입력 시 4, 8, 17 출력
-// 1) 변수 3개
+// 방법 1) 변수 3개
 let num4 = Number(prompt("[문제7] 숫자 1 : "));
 let num5 = Number(prompt("[문제7] 숫자 2 : "));
 let num6 = Number(prompt("[문제7] 숫자 3 : "));
@@ -147,7 +147,7 @@ if ( num4 > num5 && num4 > num6 ){
 } else {
     console.log('서로 다른 정수로 다시 입력하세요.')
 }
-// 2) 배열 1개 (배열로 사용하는게 수가 많아졌을 때 효과적)
+// 방법 2) 배열 1개 (배열로 사용하는게 수가 많아졌을 때 효과적)
 // 스왑(교체) : 두 자료들 간의 위치를 교체하는 방법, 한 위치에 하나의 자료만 저장할 수 있음.
 /*
     A = 10;     B = 20;
@@ -194,17 +194,21 @@ if ( num4 > num5 && num4 > num6 ){
 let player1 = Number(prompt("[문제8] 0(가위), 1(바위), 2(보) 중 선택하세요."))
 let player2 = Number(prompt("[문제8] 0(가위), 1(바위), 2(보) 중 선택하세요."))
 // let game = ['가위', '바위', '보']
-
-if ( player1 == 0 && player2 == 2 || player1 == 1 && player2 == 0 || player1 == 2 && player2 == 1 ){
+// 1) 방법 1
+if ( (player1 == 0 && player2 == 2) || (player1 == 1 && player2 == 0) || (player1 == 2 && player2 == 1) ){
     console.log('플레이어1 승리');
-} else if ( player2 == 0 && player1 == 2 || player2 == 1 && player1 == 0 || player2 == 2 && player1 == 1 ){
+} else if ( (player2 == 0 && player1 == 2) || (player2 == 1 && player1 == 0) || (player2 == 2 && player1 == 1) ){
     console.log('플레이어2 승리');
-} else if ( player2 == 0 && player1 == 0 || player2 == 1 && player1 == 1 || player2 == 2 && player1 == 2 ){
+} else if ( player2 == player1 ){
     console.log('무승부');
 } else {
     console.log('잘못된 입력입니다. 다시 입력하세요.')
 }
-
+/* 2) 방법 2 ( 패턴 찾기 )
+        1. 두 수가 같으면 무승부이다.
+        2. 플레이어1 승리 : player1 == (player2 + 1) % 3;
+        3. 플레이어2 승리 : else
+*/
 // 문제 9: 주차 차량 위치 검색
 // 주차장 차량 정보가 다음과 같이 두 개의 배열로 관리되고 있습니다. 두 배열에서 같은 인덱스는 동일한 차량의 정보를 의미합니다.
 // 차량 번호 목록: let carArray = [ '250어7142', '142가7415', '888호8888' ];
