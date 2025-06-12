@@ -33,9 +33,9 @@ let id = prompt("[문제3]아이디를 입력하세요.");
 let password = prompt("[문제3]비밀번호를 입력하세요.");
 
 if ( id == "admin" && password == "1234" ) {    // (2) 아이디가 'admin'이고, 비밀번호가 '1234'라면
-    console.log("로그인 성공");                 // (3) true "로그인 성공" 출력
+    console.log("로그인 성공");                  // (3) true "로그인 성공" 출력
 } else {                                        // (4) 그렇지 않으면
-    console.log("로그인 실패");                 // (5) false "로그인 실패" 출력
+    console.log("로그인 실패");                  // (5) false "로그인 실패" 출력
 }
 
 // 문제 4: 비밀번호 보안 등급 확인
@@ -51,11 +51,11 @@ let password4 = String(prompt("[문제4]비밀번호를 입력하세요."));
 let passlength = password4.length;
 
 if ( passlength < 8 ) {                                         // (3) 8자 미만이면
-    console.log("보안 등급 : 약함(8자 이상으로 설정해주세요.)")   // (4) true "약함" 출력
+    console.log("보안 등급 : 약함(8자 이상으로 설정해주세요.)")    // (4) true "약함" 출력
 } else if ( passlength >= 8 && passlength < 12 ) {              // (5) 8자 이상 12자 미만이면
-    console.log("보안 등급 : 보통")                             // (6) true "보통" 출력
+    console.log("보안 등급 : 보통")                              // (6) true "보통" 출력
 } else {                                                        // (7) 그렇지 않으면
-    console.log("보안 등급 : 강함")                             // (8) false "강함" 출력
+    console.log("보안 등급 : 강함")                              // (8) false "강함" 출력
 }
 
 // 문제 5: 좌석 예약 시스템
@@ -68,10 +68,11 @@ let seatList = [ 'O', 'X', 'O' ];
 // (2) 예약할 좌석의 인덱스 번호를 입력받아
 let seatNumber = Number(prompt("[문제5]예약할 좌석 번호를 입력하세요.(0, 1, 2)"));
 
-if ( seatList[seatNumber] == 'O' ) {    // (3) 이미 예약된 좌석이면
-    console.log("예약 불가");           // (4) true "예약 불가" 출력
+if ( seatList[seatNumber] == 'O' ) {     // (3) 이미 예약 완료된 좌석이면
+    console.log("예약 불가");            // (4) true "예약 불가" 출력
 } else {                                // (5) 그렇지 않으면(예약 가능 좌석이면)
-    console.log("예약 성공");           // (6) false "예약 성공" 출력
+    console.log("예약 성공");            // (6) false "예약 성공" 출력
+  //seatList[seatNumber] = 'O';           (7) 해당하는 좌석목록 상태 변경 
 }
 
 // 문제 6: 점수에 따른 상품 지급
@@ -85,9 +86,9 @@ let gameScore = Number(prompt("[문제6]게임 점수(정수)를 입력하세요
 
 if ( gameScore >= 900 ) {                               // (2) 게임 점수가 900점 이상이면
     console.log("A급 경품");                            // (3) true "A급 경품" 출력
-} else if ( gameScore < 900 && gameScore >= 700 ) {     // (4) 700점 이상 900점 미만이면
+} else if ( gameScore < 900 && gameScore >= 700 ) {     // (4) 700점 이상 900점 미만이면 (gameScore < 900 생략 가능)
     console.log("B급 경품");                            // (5) true "B급 경품" 출력
-} else if ( gameScore < 700 && gameScore >= 500 ) {     // (6) 500점 이상 700점 미만이면
+} else if ( gameScore < 700 && gameScore >= 500 ) {     // (6) 500점 이상 700점 미만이면 (gameScore < 700 생략 가능)
     console.log("C급 경품");                            // (7) true "C급 경품" 출력
 } else {                                                // (8) 그렇지 않으면
     console.log("참가상");                              // (9) false "참가상" 출력
@@ -124,9 +125,9 @@ let customerAge = Number(prompt("[문제8]나이를 입력하세요."));
 
 if ( customerAge < 8 ) {                                    // (2) 8세 미만이라면
     console.log('무료')                                     // (3) true "무료" 출력
-} else if ( customerAge >= 8 && customerAge <= 19 ) {       // (4) 8세 이상 19세 이하라면
+} else if ( customerAge >= 8 && customerAge <= 19 ) {       // (4) 8세 이상 19세 이하라면 (customerAge >= 8 생략 가능)
     console.log('5,000원')                                  // (5) true "5,000원" 출력
-} else if ( customerAge >= 20 && customerAge < 65 ) {       // (6) 20세 이상 65세 미만이라면
+} else if ( customerAge >= 20 && customerAge < 65 ) {       // (6) 20세 이상 65세 미만이라면 (customerAge >= 20 생략 가능)
     console.log('10,000원')                                 // (7) true "10,000원" 출력
 } else {                                                    // (8) 그렇지 않으면(= 65세 이상이라면)
     console.log('3,000원')                                  // (9) false "3,000원" 출력
@@ -143,9 +144,9 @@ let score9 = Number(prompt("[문제9]점수를 입력하세요."));
 
 if ( score9 >= 90 ) {                           // (2) 90점 이상이라면
     console.log('A등급')                        // (3) true "A등급" 출력
-} else if ( score9 < 90 && score9 >= 80 ) {     // (4) 80점 이상 90점 미만이라면
+} else if ( score9 < 90 && score9 >= 80 ) {     // (4) 80점 이상 90점 미만이라면 (score9 < 90 생략 가능)
     console.log('B등급')                        // (5) true "B등급" 출력
-} else if ( score9 < 80 && score9 >= 70 ) {     // (6) 70점 이상 80점 미만이라면
+} else if ( score9 < 80 && score9 >= 70 ) {     // (6) 70점 이상 80점 미만이라면 (score9 < 80 생략 가능)
     console.log('C등급')                        // (7) true "C등급" 출력
 } else {                                        // (8) 그렇지 않으면(=70점 미만이라면)
     console.log('재시험')                       // (9) false "재시험" 출력
@@ -163,10 +164,8 @@ let drinkPrices = [1000, 1000, 1500];
 // (2) 사용자로부터 원하는 음료 번호를 입력받아
 let drinkNumber = Number(prompt("[문제10]원하는 음료 번호를 입력하세요.(0, 1, 2)"))
 
-if ( drinkNumber == 0 ) {
-    console.log(`선택하신 음료는 ${drinkNames[0]}입니다. 가격은 ${drinkPrices[0]}원입니다.`)
-} else if ( drinkNumber == 1 ) {
-    console.log(`선택하신 음료는 ${drinkNames[1]}입니다. 가격은 ${drinkPrices[1]}원입니다.`)
+if ( drinkNumber >= 0 && drinkNumber <= 2 ) {
+    console.log(`선택하신 음료는 ${drinkNames[drinkNumber]}입니다. 가격은 ${drinkPrices[drinkNumber]}원입니다.`);
 } else {
-    console.log(`선택하신 음료는 ${drinkNames[2]}입니다. 가격은 ${drinkPrices[2]}원입니다.`)
+    console.log('없는 상품입니다.');
 }
