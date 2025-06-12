@@ -121,6 +121,7 @@ if ( year % 4 == 0 && year % 100 != 0 ){
 // 문제 7: 세 수 오름차순 정렬
 // 서로 다른 세 개의 정수를 입력받아, 오름차순(작은 수부터 큰 수 순서)으로 정렬하여 출력하는 프로그램을 작성하시오.
 // 예시: 17, 4, 8 입력 시 4, 8, 17 출력
+// 1) 변수 3개
 let num4 = Number(prompt("[문제7] 숫자 1 : "));
 let num5 = Number(prompt("[문제7] 숫자 2 : "));
 let num6 = Number(prompt("[문제7] 숫자 3 : "));
@@ -146,6 +147,37 @@ if ( num4 > num5 && num4 > num6 ){
 } else {
     console.log('서로 다른 정수로 다시 입력하세요.')
 }
+// 2) 배열 1개 (배열로 사용하는게 수가 많아졌을 때 효과적)
+// 스왑(교체) : 두 자료들 간의 위치를 교체하는 방법, 한 위치에 하나의 자료만 저장할 수 있음.
+/*
+    A = 10;     B = 20;
+        A = B;      B의 자료를 A에 대입 -> A의 기존 자료는 사라진다.
+    A = 20;     B = 20;    문제 발생 !!!!!
+    *해결방안 : 임시 변수를 만들어서 임시 보관
+    A = 10;     B = 20;     TEMP;
+        TEMP = A;       TEMP = 10; A = 10; B = 20;
+        A = B;          TEMP = 10; A = 20; B = 20;
+        B = TEMP;       TEMP = 10; A = 20; B = 10;
+    A = 20;     B = 10;
+*/
+// let numArray = [ num4, num5, num6 ];
+// let temp;
+// if ( numArray[0] > numArray[1] ){
+//     temp = numArray[0];
+//     numArray[0] = numArray[1];
+//     numArray[1] = temp;
+// }
+// if ( numArray[0] > numArray[2] ){
+//     temp = numArray[0];
+//     numArray[0] = numArray[2];
+//     numArray[2] = temp;
+// }
+// if ( numArray[1] > numArray[2] ){
+//     temp = numArray[1];
+//     numArray[1] = numArray[2];
+//     numArray[2] = temp;
+// }
+// console.log( numArray );
 
 
 // 문제 8: 가위바위보 게임
