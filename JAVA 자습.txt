@@ -1,0 +1,22 @@
+[ JAVA 프로그래머스 ]
+- A.substring(B, C) : A의 인덱스 번호 B부터 C-1까지 리턴한다.
+- A.substring(D)    : A의 인덱스 번호 D부터 끝까지 리턴한다.
+    String A = "Hello";
+    System.out.println(A.substring(2, 4));            -> 'll' 출력
+    System.out.println(A.substring(2, A.length()));   -> 'llo' 출력
+    System.out.println(A.substring(2));               -> 'llo' 출력
+
+- A.contains("B")   : A 문자열에 B 문자열이 포함되어있는지 판단하여 true / false
+    String A = "my java test";
+    System.out.println(A.contains("my"));             -> 'true' 출력
+    System.out.println(A.contains("My"));             -> 'false' 출력     대소문자 구분
+    System.out.println(A.contains(" my"));            -> 'false' 출력     띄어쓰기 구분
+    System.out.println(A.contains("java test"));      -> 'true' 출력
+    System.out.println(A.contains("javatest"));       -> 'false' 출력     띄어쓰기 구분
+
+- A.equals(B)       : A 와 B를 비교하여 true / false
+    String A = "abc";
+    String B = A;
+    String C = "abcd";
+    System.out.println(A.equals(B));                  -> 'true' 출력
+    System.out.println(A.equals(C));                  -> 'false' 출력     A와 C의 값이 다름
