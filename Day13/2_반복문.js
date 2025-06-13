@@ -62,8 +62,8 @@
 // 강호동 ●●●●●●●●○○
 // 신동엽 ●●●●●●●○○○
 
-let nameArray = ['유재석', '강호동', '신동엽'];
-let scores = [92, 86, 72];
+// let nameArray = ['유재석', '강호동', '신동엽'];
+// let scores = [92, 86, 72];
 // let html = '';
 // let ten = 1;
 // let one = 1;
