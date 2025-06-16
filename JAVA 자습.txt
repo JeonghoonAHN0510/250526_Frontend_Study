@@ -20,3 +20,19 @@
     String C = "abcd";
     System.out.println(A.equals(B));                  -> 'true' 출력
     System.out.println(A.equals(C));                  -> 'false' 출력     A와 C의 값이 다름
+
+- A.charAt(i)       : i번째 문자를 추출한다.
+    String A = "abc";
+    String B = A.charAt(1);                           -> 'a' 추출
+
+- Character.isUpperCase(char) : char값이 대문자인지 확인하여 true / false
+- Character.isLowerCase(char) : char값이 소문자인지 확인하여 true / false
+- Character.toUpperCase(char) : char값을 대문자로 변환
+- Character.toLowerCase(char) : char값을 소문자로 변환
+    String A = "AbCdEf";
+    Char B = A.charAt(i);
+        Character.isUpperCase(B); -> i = 0; -> 'A'이므로 true
+        Character.toLowerCase(B); -> i = 0; -> B = 'A'이므로 소문자로 변환 -> 'a' 출력
+
+- 문자열 입력받기
+    Scanner scan = new Scanner(System.in);
