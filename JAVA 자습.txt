@@ -51,4 +51,5 @@
     String.length()     : 문자열의 길이를 구하는 함수
 
 - int -> String / String -> int
-    Integer.toString();
+    Integer.toString(); : int를 String으로
+    Integer.parseInt(); : String을 int로
