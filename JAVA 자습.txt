@@ -6,6 +6,13 @@
     System.out.println(A.substring(2, A.length()));   -> 'llo' 출력
     System.out.println(A.substring(2));               -> 'llo' 출력
 
+- str.split("A"); : A 문자열 기준으로 문자열을 자른다.
+    String str = "123-456-789";
+    String str1[] = str.split("-");
+    str1[0] = "123";
+    str1[1] = "456";
+    str1[2] = "789";
+
 - A.contains("B")   : A 문자열에 B 문자열이 포함되어있는지 판단하여 true / false
     String A = "my java test";
     System.out.println(A.contains("my"));             -> 'true' 출력
@@ -21,7 +28,7 @@
     System.out.println(A.equals(B));                  -> 'true' 출력
     System.out.println(A.equals(C));                  -> 'false' 출력     A와 C의 값이 다름
 
-- A.charAt(i)       : i번째 문자를 추출한다.
+- A.charAt(i)       : i번째 문자를 추출한다. / String 타입의 데이터에서 특정 문자를 char 타입으로 변환할 때 사용하는 함수
     String A = "abc";
     String B = A.charAt(1);                           -> 'a' 추출
 
@@ -36,3 +43,9 @@
 
 - 문자열 입력받기
     Scanner scan = new Scanner(System.in);
+    String str1 = scan.next();          : 문자 혹은 문자열을 공백 기준으로 한 단어를 입력받는다.
+    String str2 = scan.nextLine();      : 문자 혹은 문장 전체를 입력받는다.(엔터 치기 전까지의 모든 문장)
+
+- 길이 구하기
+    array.length        : 배열의 길이 구하는 함수
+    String.length()     : 문자열의 길이를 구하는 함수
