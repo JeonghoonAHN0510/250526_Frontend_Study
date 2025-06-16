@@ -5,8 +5,8 @@
 // for (let index = 0; index <= scores.length - 1; index++){
 //     sum += scores[index];
 // }
-// console.log( `총점 : $(sum)` );
-// console.log( `평균 : $(sum/scores.length)` );
+// console.log( `총점 : ${sum}` );
+// console.log( `평균 : ${sum/scores.length}` );
 
 // 문제 7: 특정 조건에서 반복문 탈출하기 (break)
 // 점수 배열에서 100점 만점자가 처음 나타나면, 그 학생의 점수를 출력하고 반복문을 즉시 종료하는 프로그램을 작성하시오.
@@ -80,6 +80,8 @@
 // document.write( html )
 
 // [문제10] 강사님 버전
+let nameArray = ['유재석', '강호동', '신동엽'];
+let scores = [92, 86, 72];
 let output = "";        // 빈 문자열 선언
 for (let index = 0; index <= nameArray.length - 1; index++){
     // 이름 출력
