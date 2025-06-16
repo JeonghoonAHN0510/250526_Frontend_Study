@@ -96,13 +96,13 @@ const users = [
   { id: 3, name: '유저3', isActive: true },
   { id: 4, name: '유저4', isActive: false }
 ];
-const activeUsers = { };
+const activeUsers = [ ];
 for (let i = 0; i <= users.length - 1; i++){
     if ( users[i].isActive == true ){
-        
+        activeUsers.push( users[i] )
     }
 }
-
+console.log( activeUsers );
 
 
 // 문제 6: 객체 배열 데이터 변환하기
