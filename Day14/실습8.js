@@ -32,18 +32,31 @@ let password = prompt("비밀번호");
 let name = prompt("이름");
 const member = { id, password, name };
 
-let A2 = Object.values( members );                       // A2라는 members의 모든 자료를 배열 선언
+// for (let i = 0; i <= members.length - 1; i++){
+//     if ( id == members[i].id ){                              // 입력받은 id가 이미 있는 id라면
+//         console.log('존재하는 아이디 입니다.');
+//         break;
+//     }else{                                                   // 입력받은 id가 중복이 아니라면
+//         members.push( member );                              // members 배열에 입력받은 member 추가
+//         break;
+//     }
+// }
+// console.log( members );
 
-for (let i = 0; i <= members.length - 1; i++){
-    if ( id == A2[i].id ){                              // 입력받은 id가 이미 있는 id라면
-        console.log('존재하는 아이디 입니다.');
-        break;
-    }else{                                             // 입력받은 id가 중복이 아니라면
-        A2.push( member );                              // A 배열에 입력받은 member 추가
+let idCheck = false;
+for ( let i = 0; i <= members.length - 1; i++){
+    if ( id == members[i].id ){
+        idCheck = true;
         break;
     }
 }
-console.log( A2 );
+if ( idCheck == false ){
+    members.push( member );
+    console.log( members );
+}else{
+    console.log('존재하는 아이디 입니다.')
+}
+
 
 
 // 문제 3: 객체 배열의 속성 값 평균 구하기
@@ -74,15 +87,17 @@ const products = [
   { id: 3, name: '포도' },
   { id: 4, name: '딸기' }
 ];
-
+let idCheck4 = false;
 for (let i = 0; i <= products.length - 1; i++){
     if ( products[i].id == 3 ){                                // id가 3이라면
-        console.log( products[i] );                            // 콘솔에 호출
-    } else {
-        console.log(`id가 ${i+1}인 상품을 찾을 수 없습니다.`);
+        idCheck4 = true;
+        console.log( products[i] );
+        break;
     }
 }
-
+if ( idCheck4 == false ){
+    console.log( '상품을 찾을 수 없습니다.' );
+}
 
 
 // 문제 5: 객체 배열 필터링하기

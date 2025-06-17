@@ -27,6 +27,9 @@
     String C = "abcd";
     System.out.println(A.equals(B));                  -> 'true' 출력
     System.out.println(A.equals(C));                  -> 'false' 출력     A와 C의 값이 다름
+    .equals VS ==
+        .equals : 내용 비교
+        ==      : 주소 비교( 문자열 비교에 사용 X )
 
 - A.charAt(i)       : i번째 문자를 추출한다. / String 타입의 데이터에서 특정 문자를 char 타입으로 변환할 때 사용하는 함수
     String A = "abc";
