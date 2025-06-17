@@ -28,28 +28,26 @@ const 수강내역 = [{수강코드 : '001', 학번 : '202501', 과목코드 : '
                   {수강코드 : '003', 학번 : '202503', 과목코드 : '001', 성적 : 'C+'}];
 
 let html = `<h1>학생별 성적 대시보드</h1>`;
-for ( let i = 0; i <= 학생정보.length - 1; i++){
-    let 학생객체 = 학생정보[i];
-    let 이수여부 = true;
+for ( let i = 0; i <= 학생정보.length - 1; i++){                    // 학생정보 1번씩 호출
+    let 학생객체 = 학생정보[i];                                     // 학생객체 선언
+    let 이수여부 = true;                                            // 이수여부 기본값 true
     html += `<div style ='border-top: 1px solid #777777;'>
                 <h4 style ='font-size: 20px;'> ${학생객체.이름} (${학생객체.전공}) </h4>`;
-    for ( let j = 0; j <= 수강내역.length - 1; j++){
-        let 수강내역객체 = 수강내역[j];
-
-        if ( 학생객체.학번 == 수강내역객체.학번 ){
-            for ( let k = 0; k <= 과목정보.length - 1; k++){
-                let 과목객체 = 과목정보[k];
-                if ( 수강내역객체.성적 == "F" ){
-                    이수여부 = false;
+    for ( let j = 0; j <= 수강내역.length - 1; j++){                // 수강내역 1번씩 호출
+        let 수강내역객체 = 수강내역[j];                             // 수강내역객체 선언
+        if ( 학생객체.학번 == 수강내역객체.학번 ){                  // 수강내역 학번과 학생정보 학번이 같다면 -> 같은 것만 추리기
+            for ( let k = 0; k <= 과목정보.length - 1; k++){        // 과목정보 1번씩 호출
+                let 과목객체 = 과목정보[k];                         // 과목객체 선언
+                if ( 수강내역객체.성적 == "F" ){                    // 성적이 F라면
+                    이수여부 = false;                               // 이수여부 false 대입
                 }
-                if ( 수강내역객체.과목코드 == 과목객체.과목코드 ){
+                if ( 수강내역객체.과목코드 == 과목객체.과목코드 ){  // 수강내역 과목코드와 과목정보 과목코드가 같은 것 추리기
                     html += `<div style ='margin-left:20px; padding-left:20px; border-left: 2px solid #eeeeee'>
-                                <span style ='font-weight:bold;'>${과목객체.과목명}</span> 
-                                (${과목객체.교수명})`;
-                    if ( 이수여부 == true ){
+                                <span style ='font-weight:bold;'>${과목객체.과목명}</span> (${과목객체.교수명})`;
+                    if ( 이수여부 == true ){                        // 이수여부 == true라면 -> 성적이 F가 아니라면
                         html += `<ul><li> 성적 : ${수강내역객체.성적}  </li>
                                  <li> 이수여부 : <span style ='color: blue;font-weight:bold;'>Pass</span> </li> </ul>`;
-                    } else {
+                    } else {                                        // 이수여부 == false라면 -> 성적이 F라면
                         html += `<ul><li> 성적 : ${수강내역객체.성적}  </li>
                                  <li> 이수여부 : <span style ='color: red;font-weight:bold;'>Fail</span> </li> </ul>`;
                     }

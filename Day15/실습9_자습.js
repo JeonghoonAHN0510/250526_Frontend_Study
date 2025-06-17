@@ -44,12 +44,12 @@ for (let i = 0; i <= 회원정보.length - 1; i++){                             
                     if ( today < 구독내역객체.구독종료일 ){                 // 구독종료일이 오늘보다 크다면 -> 구독종료일이 남아있다면
                     구독상태 = true;                                        // 구독이 활성화 상태이므로 구독상태 true 대입
                     }
-                    if ( 구독여부 = true ){                                 // 구독여부 = true인 회원이라면
+                    if ( 구독여부 = true ){                                 // 구독여부 == true인 회원이라면
                         html += `<ul>
                                 <li> 구독 상품 : ${구독상품명} (${구독가격}) </li>`;
-                        if ( 구독상태 == true ){                            // + 구독상태 = true인 회원이라면
+                        if ( 구독상태 == true ){                            // + 구독상태 == true인 회원이라면
                             html += `<li> 상태 : <span style = 'color:green; font-weight:bold;'>활성</span> </li></ul></div>`;
-                        } else {                                            // 구독여부 = true && 구독상태 = false인 회원이라면
+                        } else {                                            // 구독여부 == true && 구독상태 == false인 회원이라면
                             html += `<li> 상태 : <span style = 'color:gray; font-weight:bold;'>만료</span> </li></ul></div>`;
                         }
                     }
@@ -57,7 +57,7 @@ for (let i = 0; i <= 회원정보.length - 1; i++){                             
             }
         }
     }
-    if ( 구독여부 == false ){                                               // 구독여부 = false인 회원이라면 -> 구독 내역조차 없는 회원이라면
+    if ( 구독여부 == false ){                                               // 구독여부 == false인 회원이라면 -> 구독 내역조차 없는 회원이라면
         html += `구독 내역이 없습니다.`;
     }
 }
