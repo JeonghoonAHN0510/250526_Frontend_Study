@@ -68,11 +68,11 @@ printFruits( nameList );
 
 // 예제 8: Boolean 값 반환하기
 // 임의의 숫자 하나를 매개변수로 받아, 그 숫자가 0보다 크면 true를, 그렇지 않으면 false를 반환하는 isPositive 함수를 만들어 보세요.
-function isPositive( number ){
+function isPositive( number ){  // 함수 정의
     if ( number > 0 ){
-        console.log('true');
+        return true;
     }else {
-        console.log('false');
+        return false;
     }
 }
 isPositive( 5 );

@@ -58,7 +58,7 @@
     Integer.parseInt(); : String을 int로
 
 - Math 메소드 정리
-    1. 절대값 함수
+    1. 절댓값 함수
         Math.abs(A)         : A의 절대값 반환
             Math.abs(-15);      -> '15' 반환
     2. 내림 올림 반올림 함수
@@ -69,3 +69,23 @@
         Math.round(A)       : A 값 반올림
             Math.round(10.4);   -> '10' 반환
             Math.round(10.5);   -> '11' 반환
+    3. 최댓값 최솟값 함수
+        Math.max(a, b)      : a와 b 중 큰 값 반환
+            Math.max(15, 5);    -> '15' 반환
+        Math.min(a, b)      : a와 b 중 작은 값 반환
+            Math.min(15, 5);    -> '5' 반환
+    4. 제곱 제곱근 함수
+        Math.pow(a, b)      : a의 b제곱 반환
+            Math.pow(5, 2);     -> '25' 반환(5의 2제곱)
+        Math.sqrt(a)        : a의 제곱근 반환
+            Math.sqrt(25);      -> '5' 반환
+
+- ArrayList
+    1. ArrayList 생성
+        ArrayList 변수명 = new ArrayList();
+    2. .add
+        .add();             : ArrayList 맨 뒤에 값 추가
+        .add(a, b);         : b를 [a]에 추가
+    3. .size .get
+        .size();            : ArrayList의 크기 반환
+        .get(a);            : ArrayList[a] 값 반환
