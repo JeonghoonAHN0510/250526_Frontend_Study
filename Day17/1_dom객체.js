@@ -35,21 +35,27 @@
 - DOM 객체란? (미리 만들어진) JS에 내장된 객체
     1. 정의 : Document Object Model -> HTML을 객체로 다루기 위한 객체
     2. 주요 속성
-        (1) document.write('출력할 내용')       : HTML에 문자열을 출력하는 함수
-        (2) document.querySelector('선택자')    : HTML에 지정한 선택자를 JS객체로 *변환*하는 함수
-        (3) document.querySelectorAll('선택자') : HTML에 지정한 선택자를 모두 JS객체로 *변환*하는 함수
+        (1) document.write('출력할 내용')               : HTML에 문자열을 출력하는 함수
+        (2) document.querySelector('선택자')            : HTML에 지정한 선택자를 JS객체로 *변환*하는 함수
+        (3) document.querySelectorAll('선택자')         : HTML에 지정한 선택자를 모두 JS객체로 *변환*하는 함수
             *선택자
                 1. 마크업명
                 2. .클래스명
                 3. #id명
-        (4) DOM객체.innerHTML                   : 마크업 내 html 내용물을 호출하는 속성
+        (4) DOM객체.innerHTML                           : 마크업 내 html 내용물을 나타내는 속성(호출도 출력도 가능)
                 <마크업> 여기!! </마크업>
                 inner 없음 : input, img ...
         (5) DOM객체.value
                 <마크업 value="여기!!"/>
                 value 있음 : input, select, textarea ...
                 value 없음 : div, span, table ...
-
+        (6) DOM객체.style = 'CSS속성명 : 속성값;';      : 마크업 내 style 요소 대입
+        (7) DOM객체.style.CSS속성명 = '';               : 마크업 내 style 요소 추가
+        (8) DOM객체.classList                           : 마크업 내 적용된 class 반환
+                DOM객체.classList.add('클래스명')       : 마크업 내 클래스 추가
+                DOM객체.classList.remove('클래스명')    : 마크업 내 클래스 삭제
+                DOM객체.classList.toggle('클래스명')    : 마크업 내 지정클래스가 없으면 추가/ 있으면 삭제
+                DOM객체.classList.contains('클래스명')  : 마크업 내 지정클래스가 있는지 확인(true/false)
 */
 // [1]
 console.log( document );    // document -> HTML 마크업 전체(body?)
@@ -70,10 +76,10 @@ console.log( divArray );
 const div2 = document.querySelector('div');         // div를 JS객체로 변환
 const html = div2.innerHTML;                        // div2 내의 내용물 반환
 console.log( html );                                // div2 내용물인 '박스1' 출력
-// [6] 함수 만들기
+// [6] func1 만들기
     // 함수 실행 조건 : [함수1실행] 버튼을 클릭했을 때 -> func1()을 실행
 function func1(){       // 함수 선언
-    // 1. 콘솔 출력 테스트
+    // 1. 함수 작동 테스트 콘솔 출력
     console.log('----func1 exe----');
     // 2. input 마크업을 JS객체로 변환하기
     const myInput = document.querySelector('.myInput');
@@ -82,9 +88,28 @@ function func1(){       // 함수 선언
     const text = myInput.value;
         console.log( text );
 }
-// [7] 함수 만들기
+// [7] func2 만들기
 function func2(){
-    // 1. 콘솔 출력 테스트
+    // 1. 함수 작동 테스트 콘솔 출력
     console.log('----func2 exe----');
     document.querySelector('.title').innerHTML = 'JS에서 작성한 것'
 }
+// [8] func3 만들기
+function func3(){
+    console.log('----func3 exe----');
+    // 1. 특정한 선택자의 마크업 가져오기
+    const title2 = document.querySelector('.title2');
+    // 2. 해당 마크업 내 style 속성
+    title2.style = 'color : red; font-size : 8px;'   // CSS 문법 문자열로 대입
+    // *
+    const body = document.querySelector('body');
+    body.style.backgroundColor = 'blue';
+    // 클래스 부여하기
+    title2.classList.toggle('myStyle');
+}
+
+// JS호출하는 코드는 body 내 가장 하단에 작성한다.
+// -> HTML 마크업이 모두 형성되고 JS를 처리하기 위해서
+
+// onclick  : 해당 마크업을 클릭했을때 발생
+// onchange : 해당 마크업 내 value가 변경됐을 때 발생
