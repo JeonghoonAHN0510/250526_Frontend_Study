@@ -80,16 +80,15 @@ function func7(){
 // (3) 처리할 내용      : select 요소의 값이 변경될 때마다 선택된 option의 value를 콘솔에 출력
 function func8(){
     console.log('----func8 exe----')
-    const options = document.querySelector('#foodselect');
+    const options = document.querySelector('#foodSelect');
     console.log( options );
     const value = options.value;
     console.log( value );
 }
 
-
 /* 예제 9 : input 에서 입력받은 값을 전역 배열에 저장하고 배열 상태를 출력하기. */
 // (1) 목표 요소        : #itemInput, #addItemBtn, #arrayStatus
-// (2) 사용할 내장 속성/메소드 : let (전역배열), .value, .push(), .textContent
+// (2) 사용할 내장 속성/메소드 : let (전역배열), .value, .push(), .innerHTML
 // (3) 처리할 내용      : 버튼 클릭 시 input 값을 배열에 추가하고, 현재 배열의 상태를 div에 출력
 let input = [];
 function func9(){
