@@ -74,7 +74,7 @@ const students = [
   { name: '이영희', score: 92 },
   { name: '박민준', score: 78 }
 ];
-function findTopStudent( Array ){
+function findTopStudent( Array ){                   // 전역변수로 배열이 선언되어서, 매개변수로 배열을 안 넣어도 될 듯?
     let maxScore = 0;                               // 비교할 기준 점수 선언
     let maxStudent;                                 // 가장 높은 점수를 가진 학생 이름 선언
     for ( let i = 0; i <= Array.length - 1; i++){
