@@ -1,9 +1,12 @@
-function solution(intStrs, k, s, l) {
-    let answer = [];
-    
+function solution(my_string, is_prefix) {
+    let answer = '';
+
 
 
     return answer;
 }
 
-console.log( solution(["0123456789","9876543210","9999999999999"], 50000, 5, 5) );
+console.log( solution( "banana", "ban" ) )      // 1
+console.log( solution( "banana", "nan" ) )      // 0
+console.log( solution( "banana", "abcd" ) )      // 0
+console.log( solution( "banana", "bananan" ) )      // 0
