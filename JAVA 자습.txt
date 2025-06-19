@@ -96,3 +96,17 @@
           길이를 알고 있다면, 그 길이에 맞는 배열을 선언하고 추가한다.
             - 배열을 선언하고 추가하려면, .add와 같은 함수를 사용할 수 없고
               배열[i]에 직접 하나하나 대입해야한다.(이럴때 for 반복문 사용하면 될 듯?)
+- 문자열 반전하기(뒤집기) - JS
+    let String = "hello";
+    1. 문자열을 각각의 문자로 구성된 배열로 분할하기.
+        .split('');
+            let split = String.split('');
+            -> split = ['h','e','l','l','o'];
+    2. 배열을 반전하기(뒤집기)
+        .reverse();
+            let reverse = split.reverse();
+            -> reverse = ['o','l','l','e','h'];
+    3. 반전된 배열 문자열로 결합하기
+        .join("");
+            let join = reverse.join("");
+            -> join = "olleh";

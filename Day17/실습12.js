@@ -29,7 +29,70 @@
 [ 작업 순서 ]
     1. 화면 구성(HTML/CSS)
     2. 데이터 모델링
+        (1) 저장할 자료 모두 찾기 
+            -> 날짜, 항목, 금액
+        (2) 저장할 자료들의 분리(중복 배제) / 1:N 관계 찾기
+            * 테이블(배열), 테이블의 행(객체)
     3. 함수(기능) 설계
+        (1) '등록'함수 : '등록버튼' 클릭시, 입력받은 3가지 정보를 배열에 저장하는 함수
+            함수명      : '등록함수'
+            매개변수    : 없음
+            반환값      : 없음
+            로직        : 1. input으로부터 입력받은 값 가져오기
+                          2. 입력값 3개를 객체로 구성
+                          3. 구성된 객체를 가계부목록(배열)에 저장
+            실행조건    : '등록버튼' 클릭(onclick)했을 때
+        (2) '전체조회'함수
+            함수명      : '전체조회함수'
+            매개변수    : 없음
+            반환값      : 없음
+            로직        : 특정한 구역(table)에 배열 내 모든 정보를 HTML 형식으로 출력
+            실행조건    : 1. 페이지가 열렸을 때(최초 1번)
+                          2. 등록을 성공했을 때(새로고침)
     4. 로직 구성
     5. 화면 <---> 기능 연동
 */
+// 2. 데이터 모델링
+const 가계부목록 = [
+    {코드 : 1, 날짜 : '2025-06-19', 항목 : '점심식사', 금액 : '9000'},
+    {코드 : 2, 날짜 : '2025-06-19', 항목 : '교통비', 금액 : '1500'}
+];
+let 코드자동번호 = 가계부목록[가계부목록.length-1].코드 // -> 초기 배열의 마지막 객체 코드번호
+// 3. 기능(함수) 구현
+// (1) 등록함수 정의
+function 등록함수(){
+    // console.log('----등록함수 exe----')     // 함수 onclick 확인
+    // HTML input으로부터 마크업 객체 각각 가져오기
+    const dateInput = document.querySelector('#dateInput');             // console.log( dateInput )
+    const contentInput = document.querySelector('#contentInput');       // console.log( contentInput )
+    const moneyInput = document.querySelector('#moneyInput');           // console.log( moneyInput )
+    // 각 마크업 객체로부터 입력값 가져오기
+    const date = dateInput.value;                                       // console.log( date );
+    const content = contentInput.value;                                 // console.log( content );
+    const money = moneyInput.value;                                     // console.log( money );
+    // 원하는 속성 구성으로 객체 만들기 -> {코드 : , 날짜 : , 항목 : , 금액 :}
+        // 코드자동번호 1 증가 후 대입하기 ( 실무에선 X )
+        코드자동번호++;
+    const obj = {코드 : 코드자동번호, 날짜 : date, 항목 : content, 금액 : money};  // console.log( obj );
+    // 구성한 객체를 전역변수(배열)에 저장한다.
+    가계부목록.push( obj );                                             // console.log( 가계부목록 );
+    // 등록 성공했을 때, 전체조회함수 실행
+    전체조회함수();
+}   // 함수 종료
+// (2) 전체조회함수 정의, 실행조건 : 1. 페이지가 열렸을 때(최초1번) 2. 등록을 성공했을 때
+전체조회함수();                 // 페이지가 열렸을 때(최초1번)
+function 전체조회함수(){
+    console.log('----전체조회함수 exe----')
+    // 배열 내 객체 1개당 <tr> </tr> 1개
+    // 어디에 -> <tbody id="contentBody">
+    const contentBody = document.querySelector('#contentBody');         // console.log( contentBody );
+    // 무엇을 -> 배열 내 객체 정보 -> html 형식으로 표현해서
+        // 배열 내 모든 객체 정보를
+    let html = ``;
+    for (let i = 0; i <= 가계부목록.length - 1; i++){
+        const obj = 가계부목록[i]; // i번째 객체 호출
+        html += `<tr> <td>${obj.날짜}</td> <td>${obj.항목}</td> <td>${obj.금액}</td> </tr>`
+    }
+    // 출력 -> innerHTML 이용
+    contentBody.innerHTML = html;
+}
