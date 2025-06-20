@@ -81,10 +81,11 @@ function categoryPrint(){       // 함수 선언
     // console.log ( html );
     categoryInput.innerHTML = html;
 } // 함수 종료
+
 // 2. 제품 등록 함수
 // 실행조건 : 등록버튼을 onclick했을 떄
 function productAdd(){  // 함수 선언
-    console.log('----productAdd 실행----')
+    // console.log('----productAdd 실행----')
     // 1. 입력 마크업객체 가져오기
     const categoryInput = document.querySelector('#categoryInput'); // console.log( categoryInput );
     const pnameInput = document.querySelector('#pnameInput');       // console.log( pnameInput );
@@ -127,6 +128,7 @@ function productAdd(){  // 함수 선언
     alert('제품 등록 성공')
     productPrint(); // 등록 성공 후, 제품 출력
 } // 함수 종료
+
 // 3. 제품 출력 함수
 // 실행조건 : 1. JS가 실행됐을 때, 2. 등록/삭제/수정 했을 때
 productPrint();
@@ -138,9 +140,10 @@ function productPrint(){
     let html = ``;
     for (let i = 0; i <= productList.length - 1; i++){
         const product = productList[i];
+        const category = getCategory(product.cno);
         html += `<tr>
                     <td><img src="${product.pimg}"></td>
-                    <td>${product.cno}</td>
+                    <td>${category.cname}</td>
                     <td>${product.pname}</td>
                     <td>${product.pprice.toLocaleString()}</td>
                     <td>${product.pdate}</td>
@@ -151,6 +154,7 @@ function productPrint(){
     // 3. 출력
     tbody.innerHTML = html;
 } // 함수 종료
+
 // 4. 제품 삭제 함수 -> 배열 내 삭제할 객체를 찾아서 .splice
 // 실행조건 : 삭제버튼을 onclick 했을 때
 // 매개변수 : 제품코드
@@ -168,6 +172,7 @@ function productDelete( pno ){
     // 2. 못 찾았다면
     alert('[오류] 삭제 실패')         // 오류 발생
 } // 함수 종료
+
 // 5. 제품 수정 함수 -> 새로운 정보를 받아 배열 내 수정할 객체를 찾아서 대입한다.
 // 실행조건 : 수정버튼을 onclick 했을 때
 // 매개변수 : 제품코드
@@ -188,3 +193,19 @@ function productEdit( pno ){
     // 2. 못 찾았다면
     alert('[오류] 수정 실패')
 } // 함수 종료
+
+// 6. 카테고리번호(cno)로 카테고리객체 1개 반환 함수
+// -> 카테고리번호로 카테고리명을 가져오기 위해서!!!!!!
+// 3번 제품출력함수와 연계
+// 매개변수 : cno
+function getCategory( cno ){
+    console.log('----getCategory 실행----');    console.log( cno );
+    // 1. 매개변수(cno)를 가진 카테고리 객체 찾기
+    for( let i = 0; i <= categoryList.length - 1; i++){
+        if ( cno == categoryList[i].cno ){  // i번째 카테고리객체의 cno와 매개변수 cno가 같으면
+            return categoryList[i];         // 찾은 객체를 반환
+        }
+    }
+    // 2. 못 찾았다면
+    return null;
+}
