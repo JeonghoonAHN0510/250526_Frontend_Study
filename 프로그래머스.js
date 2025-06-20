@@ -1,4 +1,4 @@
-function solution(my_string, is_prefix) {
+function solution(my_string, m, c) {
     let answer = '';
 
 
@@ -6,7 +6,5 @@ function solution(my_string, is_prefix) {
     return answer;
 }
 
-console.log( solution( "banana", "ban" ) )      // 1
-console.log( solution( "banana", "nan" ) )      // 0
-console.log( solution( "banana", "abcd" ) )      // 0
-console.log( solution( "banana", "bananan" ) )      // 0
+console.log( solution( "ihrhbakrfpndopljhygc", 4, 2 ) )     // happy
+console.log( solution( "programmers", 1, 1 ) )              // programmers
