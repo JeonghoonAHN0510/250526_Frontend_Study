@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset='utf-8'>
+    </head>
+
+    <body>
+        <div id="wrap" style="display: flex;">
+            <div id="departmentManage"><!-- 부서 관리 -->
+                <h2>부서 관리</h2>
+                <div id="departmentRegis"><!-- 부서 등록 -->
+                    <input class="departmentInput" type="text">
+                    <button class="btnAdd" onclick="departmentAdd()">추가</button>
+                </div>
+                <div id="departmentList"><!-- 부서 목록 -->
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>부서명</th>
+                                <th>관리</th>
+                            </tr>
+                        </thead>
+                        <tbody class="dL-tbody">
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div id="staffManage"><!-- 사원 관리 -->
+                <div id="staffRegis1"><!-- 사원 등록 1 -->
+                    <input class="staffNameInput" type="text" placeholder="이름">
+                    <input class="staffGradeInput" type="text" placeholder="직급">
+                </div>
+                <div id="staffRegis2"><!-- 사원 등록 2 -->
+                    <select class="departmentSelect">
+
+                    </select>
+                    <input class="staffImgInput" type="file" accept="image/">
+                    <button onclick="staffAdd()">등록</button>
+                </div>
+                <div id="staffList"><!-- 사원 목록 -->
+                    <h2>사원 전체 목록</h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>사진</th>
+                                <th>이름</th>
+                                <th>부서</th>
+                                <th>직급</th>
+                                <th>관리</th>
+                            </tr>
+                        </thead>
+                        <tbody class="sL-tbody">
+                            
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div id="holiManage"><!-- 휴가 관리-->
+                <div id="holiRegis"><!-- 휴가 신청 -->
+                    <h2>사원 휴가 신청</h2>
+                    <select class="holiRegisSelect">
+
+                    </select>
+                    <input class="holiStartDateInput" type="date">
+                    <input class="holiEndDateInput" type="date">
+                    <input class="holiReasonInput" type="text" placeholder="예: 여름 휴가">
+                    <button onclick="holiRegis()">신청</button>
+                </div>
+                <div><!-- 휴가 신청 목록 -->
+                    <h2>휴가 신청 전체 목록</h2>
+                    <div class="holiList"><!-- 휴가 내역 -->
+                        <div><!-- 휴가 내역 1인 -->
+                            <span>김민준</span> <button>신청취소</button>
+                            <p>휴가시작일 ~ 휴가종료일</p>
+                            <p>사유 : 휴가사유</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src='실습15.js'></script>
+    </body>
+
+</html>
