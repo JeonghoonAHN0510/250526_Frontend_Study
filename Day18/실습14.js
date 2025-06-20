@@ -136,9 +136,55 @@ function productPrint(){
     const tbody = document.querySelector('#tbody');
     // 2. 무엇을
     let html = ``;
+    for (let i = 0; i <= productList.length - 1; i++){
+        const product = productList[i];
+        html += `<tr>
+                    <td><img src="${product.pimg}"></td>
+                    <td>${product.cno}</td>
+                    <td>${product.pname}</td>
+                    <td>${product.pprice.toLocaleString()}</td>
+                    <td>${product.pdate}</td>
+                    <td><button onclick="productDelete(${product.pno})" class="btnDelete">삭제</button>
+                    <button onclick="productEdit(${product.pno})" class="btnEdit">수정</button></td>
+                </tr>`;
+    }
     // 3. 출력
-    tbody.innerHTML += html;
-}
-// 4. 제품 삭제 함수
-
-// 5. 제품 수정 함수
+    tbody.innerHTML = html;
+} // 함수 종료
+// 4. 제품 삭제 함수 -> 배열 내 삭제할 객체를 찾아서 .splice
+// 실행조건 : 삭제버튼을 onclick 했을 때
+// 매개변수 : 제품코드
+function productDelete( pno ){
+    // console.log('----productDelete 실행----'); console.log( pno );
+    // 1. 삭제할 번호의 객체를 찾는다.
+    for ( let i = 0; i <= productList.length - 1; i++){
+        if ( productList[i].pno == pno ){   // i번째 제품코드와 삭제할 제품코드가 같으면
+            productList.splice(i , 1);      // 해당 i번째부터 1개 삭제
+            alert('제품 삭제 성공');        // 안내
+            productPrint();                 // 삭제 이후 제품목록 새로고침(렌더링)
+            return;                         // 목표 이뤘으니 함수 종료
+        }
+    }
+    // 2. 못 찾았다면
+    alert('[오류] 삭제 실패')         // 오류 발생
+} // 함수 종료
+// 5. 제품 수정 함수 -> 새로운 정보를 받아 배열 내 수정할 객체를 찾아서 대입한다.
+// 실행조건 : 수정버튼을 onclick 했을 때
+// 매개변수 : 제품코드
+function productEdit( pno ){
+    console.log('----productEdit 실행----'); console.log( pno );
+    // 1. 수정할 번호의 객체를 찾는다.
+    for (let i = 0; i <= productList.length - 1; i++){
+        if ( productList[i].pno == pno ){               // i번째 제품코드와 수정할 제품코드가 같으면
+            const pname = prompt("수정할 제품명 : ");   // 수정할 제품명 입력받기
+            const pprice = prompt("수정할 제품가격 : ");// 수정할 제품가격 입력받기
+            productList[i].pname = pname;
+            productList[i].pprice = Number(pprice);
+            alert('수정 성공');
+            productPrint();                             // 수정 후 제품목록 새로고침(렌더링)
+            return;                                     // 성공 후 함수 종료
+        }
+    }
+    // 2. 못 찾았다면
+    alert('[오류] 수정 실패')
+} // 함수 종료
