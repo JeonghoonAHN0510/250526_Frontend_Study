@@ -3,14 +3,44 @@
 
     <head>
         <meta charset='utf-8'>
+        <style>
+            #dashboard{
+                width: 1200px;
+                margin: 0 auto;
+                text-align: center;
+            }
+            #wrap{
+                display: flex; 
+                width: 1200px;
+                margin: 0 auto;
+                justify-content: space-between;
+            }
+            #departmentManage{
+                width: 300px;
+            }
+            #staffManage{
+                width: 550px;
+            }
+            #holiManage{
+                width: 300px;
+            }
+            #holiRegis{
+                display: flex;
+                flex-direction: column;
+            }
+        </style>
     </head>
 
-    <body>
-        <div id="wrap" style="display: flex;">
+    <body style="margin: 0; padding: 0;">
+        <div id="dashboard">
+            <h1>인사 관리 대시보드</h1>
+            <p style="color: gray;">부서, 사원, 휴가 통합 관리 시스템</p>
+        </div>
+        <div id="wrap">
             <div id="departmentManage"><!-- 부서 관리 -->
                 <h2>부서 관리</h2>
                 <div id="departmentRegis"><!-- 부서 등록 -->
-                    <input class="departmentInput" type="text">
+                    <input class="departmentInput" type="text" placeholder="신규 부서명 입력">
                     <button class="btnAdd" onclick="departmentAdd()">추가</button>
                 </div>
                 <div id="departmentList"><!-- 부서 목록 -->
@@ -29,14 +59,15 @@
             </div>
             <div id="staffManage"><!-- 사원 관리 -->
                 <div id="staffRegis1"><!-- 사원 등록 1 -->
-                    <input class="staffNameInput" type="text" placeholder="이름">
-                    <input class="staffGradeInput" type="text" placeholder="직급">
+                    이름 <input class="staffNameInput" type="text">
+                    직급 <input class="staffGradeInput" type="text">
                 </div>
                 <div id="staffRegis2"><!-- 사원 등록 2 -->
+                    부서
                     <select class="departmentSelect">
 
                     </select>
-                    <input class="staffImgInput" type="file" accept="image/">
+                    사진 <input class="staffImgInput" type="file" accept="image/">
                     <button onclick="staffAdd()">등록</button>
                 </div>
                 <div id="staffList"><!-- 사원 목록 -->
@@ -60,22 +91,19 @@
             <div id="holiManage"><!-- 휴가 관리-->
                 <div id="holiRegis"><!-- 휴가 신청 -->
                     <h2>사원 휴가 신청</h2>
+                    신청 사원
                     <select class="holiRegisSelect">
 
                     </select>
-                    <input class="holiStartDateInput" type="date">
-                    <input class="holiEndDateInput" type="date">
-                    <input class="holiReasonInput" type="text" placeholder="예: 여름 휴가">
+                    휴가 시작일<input class="holiStartDateInput" type="date">
+                    휴가 종료일<input class="holiEndDateInput" type="date">
+                    휴가 사유<input class="holiReasonInput" type="text" placeholder="예: 여름 휴가">
                     <button onclick="holiRegis()">신청</button>
                 </div>
                 <div><!-- 휴가 신청 목록 -->
                     <h2>휴가 신청 전체 목록</h2>
                     <div class="holiList"><!-- 휴가 내역 -->
-                        <div><!-- 휴가 내역 1인 -->
-                            <span>김민준</span> <button>신청취소</button>
-                            <p>휴가시작일 ~ 휴가종료일</p>
-                            <p>사유 : 휴가사유</p>
-                        </div>
+
                     </div>
                 </div>
             </div>

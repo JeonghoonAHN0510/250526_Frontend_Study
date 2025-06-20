@@ -93,7 +93,7 @@ let lastsId = staffList[staffList.length - 1].sId;
     // 휴가 리스트
 const holiList = [
     {sId : 1, startDate : '2025-08-04', endDate : '2025-08-06', reason : '병원진료'},
-    {sId : 1, startDate : '2025-08-04', endDate : '2025-08-06', reason : '병원진료'}
+    {sId : 2, startDate : '2025-08-04', endDate : '2025-08-06', reason : '여름휴가'}
 ];
 // ===================== 2. 함수 만들기 =====================
 // ===================== 1) 부서 관리 =====================
@@ -355,7 +355,6 @@ function holiRegis(){
     const holiEndDate = holiEndDateInput.value;         console.log( holiEndDate );
     const holiReason = holiReasonInput.value;           console.log( holiReason );
 
-
     // 2. 유효성 검사 -> 시작일 < 종료일
     if ( holiStaffName == '' || holiStartDate > holiEndDate ){
         alert('[오류] 다시 입력하세요.');
@@ -368,6 +367,8 @@ function holiRegis(){
         endDate : holiEndDate,
         reason : holiReason
     }
+    holiList.push(obj);
+    console.log(holiList)
     holiListPrint();
 };
 
@@ -375,27 +376,52 @@ function holiRegis(){
 // 3. 휴가 목록 출력 함수
 // 생각할 것 : 어디에 / 무엇을
 // 매개변수 : 
-// 실행조건 : 페이지 열릴 때, 휴가 신청 버튼 실행될 때
+// 실행조건 : 페이지 열릴 때, 휴가 신청 버튼 실행될 때, 휴가 삭제할 때
 holiListPrint();
 function holiListPrint(){
-    console.log('----holiListPrint 실행----');
+    // console.log('----holiListPrint 실행----');
     
     // 1. 무엇을 : 휴가 리스트를
     let html = ``;
     for( let i = 0; i <= holiList.length - 1; i++){
+        let staffId = holiList[i].sId;
+        // console.log(staffId);
+        let staffName = getStaffName( staffId );
+        // console.log(staffName);
+
         html += `<div>
-                    <span>이름</span>
-                    <button>신청취소</button>
+                    <span>${staffName}</span>
+                    <button onclick ="holiCancel(${holiList[i].sId})">신청취소</button>
                     <p>${holiList[i].startDate} ~ ${holiList[i].endDate}</p>
                     <p>사유 : ${holiList[i].reason}</p>
                 </div>`
     }
     // 2. 어디에 : 휴가 내역에
     const holiListdiv = document.querySelector('.holiList');
-    console.log( holiListdiv );
+    // console.log( holiListdiv );
     // 3. 출력
     holiListdiv.innerHTML = html;
 }
+
+// 4. 휴가 신청 취소 함수
+// 생각할 것 : 어디에 / 무엇을
+// 매개변수 : 사원 번호
+// 실행조건 : '신청취소' 버튼을 onclick 했을 때
+function holiCancel( sId ){
+    console.log('----holiCancel 실행----');
+    // 1. 어디에 : 휴가 리스트에서 -> 삭제할 번호 찾기
+    for ( let i = 0; i <= holiList.length - 1; i++){
+        if ( sId == holiList[i].sId ){
+            holiList.splice( i, 1 );
+            alert('휴가 삭제 성공')
+            holiListPrint();
+            return;
+        }
+    }
+    // 2. 무엇을 : 휴가 객체 한 개를
+
+}
+
 
 
 // ===================== 4) 변환 함수 =====================
