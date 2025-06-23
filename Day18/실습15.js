@@ -49,7 +49,7 @@
 //               입력 완료 시 목록에 즉시 반영되어야 합니다.
 //         삭제: "삭제" 버튼 클릭 시, 
 //               해당 부서가 목록에서 제거되어야 합니다. 
-//               단, 해당 부서에 소속된 사원이 한 명이라도 있을 경우, 삭제할 수 없다는 경고 메시지를 표시해야 합니다.
+//               **단, 해당 부서에 소속된 사원이 한 명이라도 있을 경우, 삭제할 수 없다는 경고 메시지를 표시해야 합니다.**
 
 //     사원 관리 기능:
 //         등록: 사원 정보를 입력하고 "등록" 버튼 클릭 시, 
@@ -58,7 +58,7 @@
 //         수정: "수정" 버튼 클릭 시, 
 //               prompt 대화상자를 통해 새로운 이름과 직책을 입력받아 해당 사원의 정보를 수정하고 목록을 즉시 갱신해야 합니다.
 //         삭제: "삭제" 버튼 클릭 시, 
-//               해당 사원이 목록에서 제거되며, 관련된 모든 휴가 신청 기록도 함께 삭제되어야 합니다.
+//               **해당 사원이 목록에서 제거되며, 관련된 모든 휴가 신청 기록도 함께 삭제되어야 합니다.**
 
 //     휴가 관리 기능:
 //         신청: 휴가 정보를 입력하고 "신청" 버튼 클릭 시, 휴가 신청 목록에 즉시 추가되어야 합니다.
@@ -92,9 +92,10 @@ const staffList = [
 let lastsId = staffList[staffList.length - 1].sId;
     // 휴가 리스트
 const holiList = [
-    {sId : 1, startDate : '2025-08-04', endDate : '2025-08-06', reason : '병원진료'},
-    {sId : 2, startDate : '2025-08-04', endDate : '2025-08-06', reason : '여름휴가'}
+    {hId : 1, sId : 1, startDate : '2025-08-04', endDate : '2025-08-06', reason : '병원진료'},
+    {hId : 2, sId : 2, startDate : '2025-08-04', endDate : '2025-08-06', reason : '여름휴가'}
 ];
+let lasthId = holiList[holiList.length - 1].hId;
 // ===================== 2. 함수 만들기 =====================
 // ===================== 1) 부서 관리 =====================
 // 1. 신규 부서 추가 함수
@@ -148,11 +149,11 @@ function departmentPrint(){
 function departmentEdit( dId ){
     console.log('----departmentEdit 실행----')
     for (let i = 0; i <= departmentList.length - 1; i++){
-        if ( departmentList[i].dId == dId ){                // i번째 제품코드와 수정할 제품코드가 같으면
-            const dName = prompt("수정할 제품명 : ");       // 수정할 제품명 입력받기
+        if ( departmentList[i].dId == dId ){                // i번째 부서코드와 수정할 부서코드가 같으면
+            const dName = prompt("수정할 제품명 : ");       // 수정할 부서명 입력받기
             departmentList[i].dName = dName;
             alert('수정 성공');
-            departmentPrint();                              // 수정 후 제품목록 새로고침(렌더링)
+            departmentPrint();                              // 수정 후 부서목록 새로고침(렌더링)
             departmentCategoryPrint();
             return;                                         // 성공 후 함수 종료
         }
@@ -160,23 +161,40 @@ function departmentEdit( dId ){
 }
 
 
+
+
 // 4. 부서 삭제 함수
 // 생각할 것 : 어디에 / 무엇을
 // 매개변수 : '삭제'버튼과 같은 열의 부서 id
 // 실행조건 : '삭제' 버튼을 눌렀을 때
-function departmentDelete( dId ){
-    console.log('----departmentDelete 실행----')
-    for ( let i = 0; i <= departmentList.length - 1; i++){
-        if ( departmentList[i].dId == dId ){   // i번째 제품코드와 삭제할 제품코드가 같으면
-            departmentList.splice(i , 1);      // 해당 i번째부터 1개 삭제
-            alert('부서 삭제 성공');            // 안내
-            departmentPrint();                 // 삭제 이후 부서목록 새로고침(렌더링)
-            departmentCategoryPrint();
-            return;                             // 목표 이뤘으니 함수 종료
+function departmentDelete( input ){
+    console.log('----departmentDelete 실행----');
+    let staffDepartID = [];
+    let check = true;
+    for(let i = 0; i <= staffList.length - 1; i++){
+        let staff = staffList[i];
+        staffDepartID.push( staff.dId );
+    }
+    // console.log( staffDepartID );
+    for (let i = 0; i <= staffDepartID.length - 1; i++){
+        if ( staffDepartID[i] == input ){       // 사원리스트에 부서코드가 남아있다면
+            check = false;                      // 오류체크 false
         }
-    };
-    
-}
+    }
+    // console.log( check );
+    for (let i = 0; i <= departmentList.length - 1; i++){
+        let department = departmentList[i];
+        console.log( department );
+        if ( department.dId == input && check == true ){     // 삭제할 부서를 찾고, 오류체크도 통과했다면
+            departmentList.splice( i, 1 );
+            alert('부서 삭제 성공')
+            departmentPrint();
+            departmentCategoryPrint();
+            return;          
+        }
+    }
+    alert('[경고] 부서에 사원이 남아있습니다.')
+};
 
 // ===================== 2) 사원 관리 =====================
 
@@ -308,6 +326,14 @@ function staffEdit( sId ){
 // 실행조건 : '삭제' 버튼을 눌렀을 때
 function staffDelete( sId ){
     console.log('----staffDelete 실행----')
+    // 휴가리스트에서 같은 사원번호 휴가 찾기
+    for ( let i = 0; i <= holiList.length - 1; i++){
+        let holiday = holiList[i];
+        if ( holiday.sId == sId){
+            holiList.splice(i,1);
+        }
+    }
+    console.log( holiList );
     // 어디에 : 사원 리스트에서
     // 무엇을 : 사원 객체를
     for ( let i = 0; i <= staffList.length - 1; i++){
@@ -315,7 +341,8 @@ function staffDelete( sId ){
             staffList.splice(i, 1);
             alert('사원 삭제 성공');
             staffListPrint();
-            holiStaff(); 
+            holiStaff();
+            holiListPrint();
             return;
         }
     };
@@ -369,6 +396,7 @@ function holiRegis(){
     }
     // 3. 어디에 : 휴가 목록에 -> 어떻게? 객체 만들어서 .push
     const obj = {
+        hId : ++lasthId,
         sId : holiStaffName,
         startDate : holiStartDate,
         endDate : holiEndDate,
