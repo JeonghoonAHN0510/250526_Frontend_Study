@@ -19,5 +19,16 @@
                 DOM객체.classList.remove();                 : 지정 마크업에 클래스 삭제
                 DOM객체.classList.toggle();                 : 지정 마크업에 클래스 추가 / 삭제
                 DOM객체.classList.contains();               : 지정 마크업에 클래스 존재 여부( true / false ) 반환
+        (9) (마크업객체).files[0]                           : 지정 마크업에 업로드된 파일객체 반환
+                사용가능 마크업 : <input type = "file">
+                URL.createObjectURL(파일객체)               : 파일객체의 임의의 URL 주소 만드는 함수
+                    -> 백엔드에 업로드하기 전 *미리보기* 기능
+[ 날짜/시간 객체 ]
+    - new Date()    : 현재 시스템(PC)의 날짜/시간을 갖는 객체를 반환
+        1. let now = new Date()           : 날짜/시간 객체
+        2. now.getFullYear()        : 현재 연도 반환 함수
+        3. now.getMonth()           : 현재 월 반환 함수 (1월은 0부터 시작하므로 +1)
+        4. now.getDay()             : 현재 요일 반환 함수 (일요일 0 반환...토요일 6 반환)
+        5. now.getDate()            : 현재 일 반환 함수
 ** 항상 console.log()로 확인해가면서 하기 -> 오류 확인용
 */
