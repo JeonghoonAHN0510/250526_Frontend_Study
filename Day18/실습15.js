@@ -112,6 +112,7 @@ function departmentAdd(){
     // console.log( obj );
     departmentList.push( obj );
     departmentPrint()
+    departmentCategoryPrint();
 };
 
 // 2. 부서 목록 출력 함수
@@ -152,9 +153,10 @@ function departmentEdit( dId ){
             departmentList[i].dName = dName;
             alert('수정 성공');
             departmentPrint();                              // 수정 후 제품목록 새로고침(렌더링)
+            departmentCategoryPrint();
             return;                                         // 성공 후 함수 종료
         }
-    }
+    };
 }
 
 
@@ -169,9 +171,11 @@ function departmentDelete( dId ){
             departmentList.splice(i , 1);      // 해당 i번째부터 1개 삭제
             alert('부서 삭제 성공');            // 안내
             departmentPrint();                 // 삭제 이후 부서목록 새로고침(렌더링)
+            departmentCategoryPrint();
             return;                             // 목표 이뤘으니 함수 종료
         }
-    }    
+    };
+    
 }
 
 // ===================== 2) 사원 관리 =====================
@@ -208,7 +212,8 @@ function staffAdd(){
     // console.log( obj );
     // 4. 어디에 : 사원 리스트에 .push로
     staffList.push( obj );
-    staffListPrint()
+    staffListPrint();
+    holiStaff();
 };
 
 
@@ -218,7 +223,7 @@ function staffAdd(){
 // 실행조건 : 페이지가 열릴 때
 departmentCategoryPrint();
 function departmentCategoryPrint(){
-    // console.log('----departmentCategoryPrint 실행----');
+    console.log('----departmentCategoryPrint 실행----');
     // 1. 어디에 : 부서 카테고리 출력 셀렉에
     let departmentSelect = document.querySelector('.departmentSelect');
     // console.log( departmentSelect );
@@ -291,6 +296,7 @@ function staffEdit( sId ){
             staffList[i].dId = NewdId;
             alert('수정 성공');
             staffListPrint();
+            holiStaff();
             return;
         }
     }
@@ -309,9 +315,10 @@ function staffDelete( sId ){
             staffList.splice(i, 1);
             alert('사원 삭제 성공');
             staffListPrint();
+            holiStaff(); 
             return;
         }
-    }    
+    };
 };
 
 // ===================== 3) 휴가 관리 =====================
@@ -419,7 +426,6 @@ function holiCancel( sId ){
         }
     }
     // 2. 무엇을 : 휴가 객체 한 개를
-
 }
 
 
