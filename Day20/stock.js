@@ -19,6 +19,9 @@ function StockRegistration() {
         alert('[오류] 비어있는 항목이 있습니다.');
         return;                         // 반환값 없는 함수 종료             
     }
+
+    let sno = stockList.length == 0 ? 1 : stockList[stockList.length - 1].sno + 1;
+
     // 2. 어디에 : 제품 목록에
     console.log(stock);
     let pNum = getProductName(stock);
@@ -26,6 +29,7 @@ function StockRegistration() {
     // stype 얻는 함수
     let stype = stockType == '입고' ? true : false;
     console.log(stype);
+
     // 2-1. 입력값들 객체화하기
     const obj = {
         sno: sno++,
@@ -36,13 +40,14 @@ function StockRegistration() {
     }; console.log(obj);
     // 2-2. 객체를 리스트에 넣기
     stockList.push(obj);
+    let jsonData = JSON.stringify(stockList)
+    localStorage.setItem('stockList', jsonData)
     console.log(stockList);
     stocksList();
     // 재고 목록 업데이트 함수 넣기
 
     alert('재고 등록 성공')
 };
-
 
 //=============================변동명 옵션 함수=============================
 // 실행조건 : 페이지가 열릴 때, 제품이 등록/삭제 되었을 때
@@ -80,8 +85,7 @@ function stockOption() {
     productsList();  // 제품 목록함수
 };
 
-//=============================제품코드로 제품이름 출력 함수=============================
-// 매개변수 : pno
+// 제품이름출력 + 제품코드출력 함수
 
 function getProductName(product1) {
     for (let i = 0; i <= productList.length - 1; i++) {
@@ -91,10 +95,18 @@ function getProductName(product1) {
         }
         if (product1 == product.pname) {
             return product.pno;
-        }        
+        }
     }
 };
 
+//=============================입고유형으로 true/false 출력 함수=============================
+function getstype(boolean) {
+    // 입력값 객체 가져오기
+    let stockTypeInput = document.querySelector('#stockTypeInput');
+    let stockType = stockTypeInput.value;
+    let stype = boolean == '입고' ? true : false;
+    return stype;
+}
 
 // 2. 재고로그목록 출력함수
 stocksList();
@@ -120,7 +132,7 @@ function stocksList() {
         htmlStock += `<tr>
                     <td> ${pStockName} </td>
                     <td> ${stock.stype ? '입고' : '출고'} </td>
-                    <td> ${stock.scount.toLocaleString()}  </td>
+                    <td> ${Number(stock.scount).toLocaleString()}  </td>
                     <td> ${stock.scuz}  </td>
                     <td> <button onclick="stockEdit( ${stock.sno})" > 입출사유변경 </button> </td>
                 </tr>`
@@ -144,6 +156,7 @@ function stockEdit(sno) {   // 재고 코드를 매개함수로 입력하기
         if (stock.sno == sno) {    // 재고리스트 인덱스의 재고 코드가, 찾는 재고 코드와 같다면
             const scuz = prompt('변경된 입출사유를 입력하세요.');
             stock.scuz = scuz; // 프롬프트에 적은 문자열로 변경
+            localStorage.setItem('stockList', JSON.stringify(stockList));
             alert('입출사유 수정 성공') // 안내
             stocksList(); // 재고 로그 조회 새로고침
             return; // 함수 종료
