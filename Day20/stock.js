@@ -21,10 +21,10 @@ function StockRegistration() {
     }
     // 2. 어디에 : 제품 목록에
     console.log(stock);
-    let pNum = getProductNum(stock);
+    let pNum = getProductName(stock);
     console.log(pNum)
     // stype 얻는 함수
-    let stype = getstype(stockType);
+    let stype = stockType == '입고' ? true : false;
     console.log(stype);
     // 2-1. 입력값들 객체화하기
     const obj = {
@@ -83,32 +83,18 @@ function stockOption() {
 //=============================제품코드로 제품이름 출력 함수=============================
 // 매개변수 : pno
 
-function getProductName(pno) {
+function getProductName(product1) {
     for (let i = 0; i <= productList.length - 1; i++) {
         let product = productList[i];
-        if (pno == product.pno) {
+        if (product1 == product.pno) {
             return product.pname;
         }
+        if (product1 == product.pname) {
+            return product.pno;
+        }        
     }
 };
-//=============================제품이름으로 제품코드 출력 함수=============================
-// 매개변수 : pname
-function getProductNum(pname) {
-    for (let i = 0; i <= productList.length - 1; i++) {
-        let product = productList[i];
-        if (pname == product.pname) {
-            return product.pno;
-        }
-    }
-}
-//=============================입고유형으로 true/false 출력 함수=============================
-function getstype(boolean) {
-    // 입력값 객체 가져오기
-    let stockTypeInput = document.querySelector('#stockTypeInput');
-    let stockType = stockTypeInput.value;
-    let stype = boolean == '입고' ? true : false;
-    return stype;
-}
+
 
 // 2. 재고로그목록 출력함수
 stocksList();
