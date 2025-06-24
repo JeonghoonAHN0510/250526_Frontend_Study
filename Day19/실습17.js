@@ -49,6 +49,7 @@ function addWaiting(){
     const count = countInput.value;         console.log( count );
     let no = 1;     // 대기번호 초기값
     // 3. localStorage에서 waitingList 가져오기(존재하지 않으면 새로 생성, 존재하면 타입 변환)
+        // 이 부분을 '대기 확인 함수'에서도 사용하니, 함수화하면 코드가 간단해진다.
     let waitingList = localStorage.getItem('waitingList');
     console.log ( waitingList );
     if ( waitingList == null ){                             // 존재하지 않으면
