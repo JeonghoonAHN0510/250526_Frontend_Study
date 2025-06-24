@@ -124,5 +124,6 @@ function cartDelete(cno) { // 카트 번호 삭제해야하니께 cno
 function allDelete(){
     console.log('----allDelete----')
     localStorage.removeItem( 'cartList' );
-    location.reload();
+    cartList = [];
+    cartsList();
 }

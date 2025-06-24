@@ -99,15 +99,6 @@ function getProductName(product1) {
     }
 };
 
-//=============================입고유형으로 true/false 출력 함수=============================
-function getstype(boolean) {
-    // 입력값 객체 가져오기
-    let stockTypeInput = document.querySelector('#stockTypeInput');
-    let stockType = stockTypeInput.value;
-    let stype = boolean == '입고' ? true : false;
-    return stype;
-}
-
 // 2. 재고로그목록 출력함수
 stocksList();
 function stocksList() {
