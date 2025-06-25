@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset='utf-8'>
+    </head>
+
+    <body>
+        <div>
+            <input id="nameInput" type="text" placeholder="제품명">
+            <input id="priceInput" type="number" placeholder="제품가격">
+            <textarea id="infoInput"></textarea>
+            <input id="imgInput" accept="image/*" type="file">
+            <button onclick="productRegistration()">제품등록</button>
+        </div>
+        <div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>이미지</th>
+                        <th>제품명</th>
+                        <th>제품가격</th>
+                        <th>설명</th>
+                        <th>비고</th>
+                    </tr>
+                </thead>
+                <tbody id="productTable">
+                    <tr>
+                        <td><img src="https://placehold.co/100x100"></td>
+                        <td>코카콜라</td>
+                        <td>1500</td>
+                        <td>설명</td>
+                        <td><button>삭제</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <script src='연습.js'></script>
+    </body>
+
+</html>
