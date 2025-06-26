@@ -1,0 +1,40 @@
+[ Github ] - VCS(Version Control System)
+    - 분산 버전 관리 툴을 제공하는 웹 서비스
+    1. 웹 서비스에서 코드들을 저장하는 코드 저장소
+    2. 다양한 기업들이 사용하는 협업 플랫폼
+
+[ Github 이용방법 ]
+- VSCode와 Github 최초 연동 (PC당 1번)
+1. VSCode(소스제어) : Windows용 GIT 다운로드
+2. Git for Windows/x64 Setup. 다운로드 후 실행
+3. 설치 완료 후 VSCode 재실행
+4. 'Github에 게시' -> 로그인
+5. publish to github public repository
+6. 등록자 등록하기.
+7. [메시지]에 업로드할 때 기록할 메모 작성 -> [ 커밋 및 푸시 ]
+8. 우측 하단 [ 원격 추가 ] 클릭 -> main(원격 추가)
+
+
+- 코드를 올리는 등록자 등록 (자리 바뀔때마다 해야함.)
+1. [터미널] -> [새 터미널]
+2. 터미널 상단 [+] [v] 클릭 후 [ git bash ] ( github 전용 터미널 )
+3. git config --global user.name [name 확인]
+4. git config --global user.email [email 확인]
+5. git config --global user.name JeonghoonAHN0510 [name 설정]
+6. git config --global user.email Jeonghoonahn0510@gmail.com [email 설정]
+
+
+[ 주요 용어 ]
+1. repository : 저장소 (코드들을 저장하는 하나의 저장소)(주로 프로젝트 단위)
+2. commit : 코드 수정 완료(로컬 pc 기준)
+3. push : 로컬 코드를 깃허브에 반영
+
+
+* 로그아웃 전 꼭 '커밋/푸시'하기
+[ VSCode Git 로그아웃 ]
+    1. 좌측 하단 메뉴[계정] 클릭
+    2. 로그아웃
+[ 현재PC Git 로그아웃 ]
+    1. 윈도우 검색창 : 자격 증명 관리자
+    2. [Windows 자격 증명] 클릭
+    3. [일반 자격 증명] 클릭 후 git 제거
