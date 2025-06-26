@@ -10,11 +10,11 @@ function boardWrite(){
     const pwd = pwdInput.value;
     // 3. 객체화
     const obj = {
-        title : title,
-        content : content,
-        pwd : pwd
-    }
-    // 4. localStorage에서 배열 가져오기
+        title,
+        content,
+        pwd
+    };      // 속성명과 속성값이 같다면, 속성명 생략 가능
+    // 4. localStorage에서 배열 가져오기 -> 나중에 함수로 간단하게 정리
     let boardList = localStorage.getItem('boardList');
     if ( boardList == null ){
         boardList = [];
