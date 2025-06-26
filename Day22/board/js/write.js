@@ -21,9 +21,9 @@ function boardWrite(){
     }else {
         boardList = JSON.parse( boardList );
     }
-    // 5. 객체를 배열에 저장
-        // 자동 게시물 번호 부여
+    // 자동 게시물 번호 부여
     obj.no = boardList.length == 0 ? 1 : boardList[boardList.length - 1].no + 1;
+    // 5. 객체를 배열에 저장
     boardList.push( obj );
     // 6. localStorage에 배열 저장하기
     localStorage.setItem('boardList', JSON.stringify(boardList));
@@ -31,3 +31,5 @@ function boardWrite(){
     alert('게시물 작성 성공');
     location.href = 'list.html';    // 글쓰기 성공 시, 'list.html'로 이동
 }
+
+//==============================localStorage에서 boardList 가져오는 함수 만들어보기======================================
